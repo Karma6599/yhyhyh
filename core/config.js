@@ -1,9 +1,6 @@
-// =============================================================
-// CONFIG & PERSISTENCE
-// merged webpack modules: 4009 Config, 699 FileManager, 7332 Settings, 8489 GameSettings, 9875 LobbyInfo, 6068 SCIDConfig, 8545 GameSCIDManager
-// =============================================================
-
+//============================================================================//// CONFIG & PERSISTENCE (ALL CONFIG KEYS + DEFAULTS)// merged webpack modules: 4009 Config, 699 FileManager, 7332 Settings, 8489 GameSettings, 9875 LobbyInfo, 6068 SCIDConfig, 8545 GameSCIDManager//============================================================================//
 // --------------------- MODULE 4009 — Config ---------------------
+
 
 // ============================================================ //
 // webpack module 4009  —  Config
@@ -106,6 +103,7 @@ __webpack_modules__[4009] = function Config_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 699 — FileManager ---------------------
+
 
 // ============================================================ //
 // webpack module 699  —  FileManager
@@ -311,6 +309,7 @@ __webpack_modules__[699] = function FileManager_factory(__unused_webpack_module,
 
 // --------------------- MODULE 7332 — Settings ---------------------
 
+
 // ============================================================ //
 // webpack module 7332  —  Settings
 // exports: Settings
@@ -361,6 +360,7 @@ __webpack_modules__[7332] = function Settings_factory(__unused_webpack_module, e
 
 // --------------------- MODULE 8489 — GameSettings ---------------------
 
+
 // ============================================================ //
 // webpack module 8489  —  GameSettings
 // exports: GameSettings
@@ -399,6 +399,7 @@ __webpack_modules__[8489] = function GameSettings_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 9875 — LobbyInfo ---------------------
+
 
 // ============================================================ //
 // webpack module 9875  —  LobbyInfo
@@ -491,6 +492,7 @@ __webpack_modules__[9875] = function LobbyInfo_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 6068 — SCIDConfig ---------------------
 
+
 // ============================================================ //
 // webpack module 6068  —  SCIDConfig
 // exports: SCIDConfig
@@ -534,6 +536,7 @@ __webpack_modules__[6068] = function SCIDConfig_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 8545 — GameSCIDManager ---------------------
+
 
 // ============================================================ //
 // webpack module 8545  —  GameSCIDManager

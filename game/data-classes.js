@@ -1,9 +1,6 @@
-// =============================================================
-// GAME DATA CLASSES (LOGIC*DATA)
-// merged webpack modules: 1552 LogicAreaEffectData, 7559 LogicColorGradientData, 6292 LogicCardData, 7171 LogicCharacterData, 3020 LogicColor, 2567 LogicEffectData, 8040 LogicEmoteData, 7269 LogicFameTierData, 9822 LogicGameModeVariationData, 8899 LogicItemData, 4325 LogicLocationData, 944 LogicLocationThemeData, 4629 LogicPlayerTitleData, 7479 LogicProjectileData, 3311 LogicRandomRewardContainerData, 2202 LogicRandomRewardData, 2118 LogicResourceData, 3537 LogicSkillData, 3555 LogicSkinData, 5257 LogicSkinConfData, 7493 LogicSprayData, 6253 LogicThemeData, 3503 LogicMusicData, 7542 MaintenanceModeInfo, 733 LocationInfo, 4812 LogicConfData, 7089 LogicDailyData
-// =============================================================
-
+//============================================================================//// GAME DATA CLASSES (LOGIC*DATA)// merged webpack modules: 1552 LogicAreaEffectData, 7559 LogicColorGradientData, 6292 LogicCardData, 7171 LogicCharacterData, 3020 LogicColor, 2567 LogicEffectData, 8040 LogicEmoteData, 7269 LogicFameTierData, 9822 LogicGameModeVariationData, 8899 LogicItemData, 4325 LogicLocationData, 944 LogicLocationThemeData, 4629 LogicPlayerTitleData, 7479 LogicProjectileData, 3311 LogicRandomRewardContainerData, 2202 LogicRandomRewardData, 2118 LogicResourceData, 3537 LogicSkillData, 3555 LogicSkinData, 5257 LogicSkinConfData, 7493 LogicSprayData, 6253 LogicThemeData, 3503 LogicMusicData, 7542 MaintenanceModeInfo, 733 LocationInfo, 4812 LogicConfData, 7089 LogicDailyData//============================================================================//
 // --------------------- MODULE 1552 — LogicAreaEffectData ---------------------
+
 
 // ============================================================ //
 // webpack module 1552  —  LogicAreaEffectData
@@ -31,6 +28,7 @@ __webpack_modules__[1552] = function LogicAreaEffectData_factory(__unused_webpac
 };
 
 // --------------------- MODULE 7559 — LogicColorGradientData ---------------------
+
 
 // ============================================================ //
 // webpack module 7559  —  LogicColorGradientData
@@ -63,6 +61,7 @@ __webpack_modules__[7559] = function LogicColorGradientData_factory(__unused_web
 };
 
 // --------------------- MODULE 6292 — LogicCardData ---------------------
+
 
 // ============================================================ //
 // webpack module 6292  —  LogicCardData
@@ -104,6 +103,7 @@ __webpack_modules__[6292] = function LogicCardData_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 7171 — LogicCharacterData ---------------------
+
 
 // ============================================================ //
 // webpack module 7171  —  LogicCharacterData
@@ -234,6 +234,7 @@ __webpack_modules__[7171] = function LogicCharacterData_factory(__unused_webpack
 
 // --------------------- MODULE 3020 — LogicColor ---------------------
 
+
 // ============================================================ //
 // webpack module 3020  —  LogicColor
 // exports: LogicColor
@@ -317,6 +318,7 @@ __webpack_modules__[3020] = function LogicColor_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 2567 — LogicEffectData ---------------------
+
 
 // ============================================================ //
 // webpack module 2567  —  LogicEffectData
@@ -439,6 +441,7 @@ __webpack_modules__[2567] = function LogicEffectData_factory(__unused_webpack_mo
 
 // --------------------- MODULE 8040 — LogicEmoteData ---------------------
 
+
 // ============================================================ //
 // webpack module 8040  —  LogicEmoteData
 // exports: LogicEmoteData
@@ -483,6 +486,7 @@ __webpack_modules__[8040] = function LogicEmoteData_factory(__unused_webpack_mod
 
 // --------------------- MODULE 7269 — LogicFameTierData ---------------------
 
+
 // ============================================================ //
 // webpack module 7269  —  LogicFameTierData
 // exports: LogicFameTierData
@@ -520,6 +524,7 @@ __webpack_modules__[7269] = function LogicFameTierData_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 9822 — LogicGameModeVariationData ---------------------
+
 
 // ============================================================ //
 // webpack module 9822  —  LogicGameModeVariationData
@@ -596,6 +601,7 @@ __webpack_modules__[9822] = function LogicGameModeVariationData_factory(__unused
 
 // --------------------- MODULE 8899 — LogicItemData ---------------------
 
+
 // ============================================================ //
 // webpack module 8899  —  LogicItemData
 // exports: LogicItemData
@@ -621,6 +627,7 @@ __webpack_modules__[8899] = function LogicItemData_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 4325 — LogicLocationData ---------------------
+
 
 // ============================================================ //
 // webpack module 4325  —  LogicLocationData
@@ -924,6 +931,7 @@ __webpack_modules__[4325] = function LogicLocationData_factory(__unused_webpack_
 
 // --------------------- MODULE 944 — LogicLocationThemeData ---------------------
 
+
 // ============================================================ //
 // webpack module 944  —  LogicLocationThemeData
 // exports: LogicLocationThemeData
@@ -1077,6 +1085,7 @@ __webpack_modules__[944] = function LogicLocationThemeData_factory(__unused_webp
 
 // --------------------- MODULE 4629 — LogicPlayerTitleData ---------------------
 
+
 // ============================================================ //
 // webpack module 4629  —  LogicPlayerTitleData
 // exports: LogicPlayerTitleData
@@ -1134,6 +1143,7 @@ __webpack_modules__[4629] = function LogicPlayerTitleData_factory(__unused_webpa
 
 // --------------------- MODULE 7479 — LogicProjectileData ---------------------
 
+
 // ============================================================ //
 // webpack module 7479  —  LogicProjectileData
 // exports: LogicProjectileData
@@ -1160,6 +1170,7 @@ __webpack_modules__[7479] = function LogicProjectileData_factory(__unused_webpac
 };
 
 // --------------------- MODULE 3311 — LogicRandomRewardContainerData ---------------------
+
 
 // ============================================================ //
 // webpack module 3311  —  LogicRandomRewardContainerData
@@ -1213,6 +1224,7 @@ __webpack_modules__[3311] = function LogicRandomRewardContainerData_factory(__un
 
 // --------------------- MODULE 2202 — LogicRandomRewardData ---------------------
 
+
 // ============================================================ //
 // webpack module 2202  —  LogicRandomRewardData
 // exports: LogicRandomRewardData
@@ -1245,6 +1257,7 @@ __webpack_modules__[2202] = function LogicRandomRewardData_factory(__unused_webp
 
 // --------------------- MODULE 2118 — LogicResourceData ---------------------
 
+
 // ============================================================ //
 // webpack module 2118  —  LogicResourceData
 // exports: LogicResourceData
@@ -1276,6 +1289,7 @@ __webpack_modules__[2118] = function LogicResourceData_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 3537 — LogicSkillData ---------------------
+
 
 // ============================================================ //
 // webpack module 3537  —  LogicSkillData
@@ -1335,6 +1349,7 @@ __webpack_modules__[3537] = function LogicSkillData_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 3555 — LogicSkinData ---------------------
+
 
 // ============================================================ //
 // webpack module 3555  —  LogicSkinData
@@ -1409,6 +1424,7 @@ __webpack_modules__[3555] = function LogicSkinData_factory(__unused_webpack_modu
 
 // --------------------- MODULE 5257 — LogicSkinConfData ---------------------
 
+
 // ============================================================ //
 // webpack module 5257  —  LogicSkinConfData
 // exports: LogicSkinConfData
@@ -1479,6 +1495,7 @@ __webpack_modules__[5257] = function LogicSkinConfData_factory(__unused_webpack_
 
 // --------------------- MODULE 7493 — LogicSprayData ---------------------
 
+
 // ============================================================ //
 // webpack module 7493  —  LogicSprayData
 // exports: LogicSprayData
@@ -1510,6 +1527,7 @@ __webpack_modules__[7493] = function LogicSprayData_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 6253 — LogicThemeData ---------------------
+
 
 // ============================================================ //
 // webpack module 6253  —  LogicThemeData
@@ -1624,6 +1642,7 @@ __webpack_modules__[6253] = function LogicThemeData_factory(__unused_webpack_mod
 
 // --------------------- MODULE 3503 — LogicMusicData ---------------------
 
+
 // ============================================================ //
 // webpack module 3503  —  LogicMusicData
 // exports: LogicMusicData
@@ -1658,6 +1677,7 @@ __webpack_modules__[3503] = function LogicMusicData_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 7542 — MaintenanceModeInfo ---------------------
+
 
 // ============================================================ //
 // webpack module 7542  —  MaintenanceModeInfo
@@ -1707,6 +1727,7 @@ __webpack_modules__[7542] = function MaintenanceModeInfo_factory(__unused_webpac
 
 // --------------------- MODULE 733 — LocationInfo ---------------------
 
+
 // ============================================================ //
 // webpack module 733  —  LocationInfo
 // exports: LocationInfo
@@ -1750,6 +1771,7 @@ __webpack_modules__[733] = function LocationInfo_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 4812 — LogicConfData ---------------------
+
 
 // ============================================================ //
 // webpack module 4812  —  LogicConfData
@@ -1829,6 +1851,7 @@ __webpack_modules__[4812] = function LogicConfData_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 7089 — LogicDailyData ---------------------
+
 
 // ============================================================ //
 // webpack module 7089  —  LogicDailyData

@@ -1,9 +1,6 @@
-// =============================================================
-// SOCIAL UI ENTRIES
-// merged webpack modules: 2533 AllianceEventStreamEntry, 7676 ChatStreamEntry, 3341 TeamStream, 8727 StreamItem, 8418 FriendItem, 1982 FriendRequestContainer, 9526 TeamMemberItem, 100 TeamMemberEntry, 1399 TeamEntry, 4223 AllianceFullEntry, 6371 AllianceHeaderEntry, 910 PlayerEntry, 1760 StatusItem, 6265 StatusSelector
-// =============================================================
-
+//============================================================================//// SOCIAL UI ENTRIES// merged webpack modules: 2533 AllianceEventStreamEntry, 7676 ChatStreamEntry, 3341 TeamStream, 8727 StreamItem, 8418 FriendItem, 1982 FriendRequestContainer, 9526 TeamMemberItem, 100 TeamMemberEntry, 1399 TeamEntry, 4223 AllianceFullEntry, 6371 AllianceHeaderEntry, 910 PlayerEntry, 1760 StatusItem//============================================================================//
 // --------------------- MODULE 2533 — AllianceEventStreamEntry ---------------------
+
 
 // ============================================================ //
 // webpack module 2533  —  AllianceEventStreamEntry
@@ -39,6 +36,7 @@ __webpack_modules__[2533] = function AllianceEventStreamEntry_factory(__unused_w
 };
 
 // --------------------- MODULE 7676 — ChatStreamEntry ---------------------
+
 
 // ============================================================ //
 // webpack module 7676  —  ChatStreamEntry
@@ -81,6 +79,7 @@ __webpack_modules__[7676] = function ChatStreamEntry_factory(__unused_webpack_mo
 };
 
 // --------------------- MODULE 3341 — TeamStream ---------------------
+
 
 // ============================================================ //
 // webpack module 3341  —  TeamStream
@@ -125,6 +124,7 @@ __webpack_modules__[3341] = function TeamStream_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 8727 — StreamItem ---------------------
+
 
 // ============================================================ //
 // webpack module 8727  —  StreamItem
@@ -186,6 +186,7 @@ __webpack_modules__[8727] = function StreamItem_factory(__unused_webpack_module,
 
 // --------------------- MODULE 8418 — FriendItem ---------------------
 
+
 // ============================================================ //
 // webpack module 8418  —  FriendItem
 // exports: FriendItem
@@ -218,6 +219,7 @@ __webpack_modules__[8418] = function FriendItem_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 1982 — FriendRequestContainer ---------------------
+
 
 // ============================================================ //
 // webpack module 1982  —  FriendRequestContainer
@@ -255,6 +257,7 @@ __webpack_modules__[1982] = function FriendRequestContainer_factory(__unused_web
 
 // --------------------- MODULE 9526 — TeamMemberItem ---------------------
 
+
 // ============================================================ //
 // webpack module 9526  —  TeamMemberItem
 // exports: TeamMemberItem
@@ -286,6 +289,7 @@ __webpack_modules__[9526] = function TeamMemberItem_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 100 — TeamMemberEntry ---------------------
+
 
 // ============================================================ //
 // webpack module 100  —  TeamMemberEntry
@@ -327,6 +331,7 @@ __webpack_modules__[100] = function TeamMemberEntry_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 1399 — TeamEntry ---------------------
+
 
 // ============================================================ //
 // webpack module 1399  —  TeamEntry
@@ -374,6 +379,7 @@ __webpack_modules__[1399] = function TeamEntry_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 4223 — AllianceFullEntry ---------------------
 
+
 // ============================================================ //
 // webpack module 4223  —  AllianceFullEntry
 // exports: AllianceFullEntry
@@ -411,6 +417,7 @@ __webpack_modules__[4223] = function AllianceFullEntry_factory(__unused_webpack_
 
 // --------------------- MODULE 6371 — AllianceHeaderEntry ---------------------
 
+
 // ============================================================ //
 // webpack module 6371  —  AllianceHeaderEntry
 // exports: AllianceHeaderEntry
@@ -441,6 +448,7 @@ __webpack_modules__[6371] = function AllianceHeaderEntry_factory(__unused_webpac
 };
 
 // --------------------- MODULE 910 — PlayerEntry ---------------------
+
 
 // ============================================================ //
 // webpack module 910  —  PlayerEntry
@@ -514,6 +522,7 @@ __webpack_modules__[910] = function PlayerEntry_factory(__unused_webpack_module,
 
 // --------------------- MODULE 1760 — StatusItem ---------------------
 
+
 // ============================================================ //
 // webpack module 1760  —  StatusItem
 // exports: StatusItem
@@ -566,75 +575,6 @@ __webpack_modules__[1760] = function StatusItem_factory(__unused_webpack_module,
         }
         StatusItem = v8 = StatusItem;
         exports.StatusItem = StatusItem;
-        return;
-};
-
-// --------------------- MODULE 6265 — StatusSelector ---------------------
-
-// ============================================================ //
-// webpack module 6265  —  StatusSelector
-// exports: StatusSelectorPopup
-// deps: 1760 (StatusItem), 4934 (GUI), 5039 (GameButton), 5599 (TeamMemberStatusMessage), 7265 (Localisation), 8261 (ListContainerPopup), 9168 (MessageManager)
-// ============================================================ //
-
-__webpack_modules__[6265] = function StatusSelector_factory(__unused_webpack_module, exports, __webpack_require__) {
-    var ListContainerPopup, Localisation, StatusItem, TeamMemberStatusMessage, MessageManager, GUI, GameButton, StatusSelectorPopup, <class_fields_init>, StatusSelectorPopup;
-        (Object).defineProperty(exports, "__esModule", { value: true });
-        exports.StatusSelectorPopup = undefined;
-        ListContainerPopup = __webpack_require__(8261);
-        Localisation = __webpack_require__(7265);
-        StatusItem = __webpack_require__(1760);
-        TeamMemberStatusMessage = __webpack_require__(5599);
-        MessageManager = __webpack_require__(9168);
-        GUI = __webpack_require__(4934);
-        GameButton = __webpack_require__(5039);
-        static refreshItems () {
-    var listContainer, statusItemIndex, statusItem, naviHeight;
-        listContainer = (this).container;
-        (listContainer).clearEntries();
-        this.statusItemsCount = (this).statusesArray.length;
-        statusItemIndex = 0;
-        while ((statusItemIndex < (this).statusItemsCount)) {
-            statusItem = new (StatusItem).StatusItem((this).statusesArray[statusItemIndex]);
-            (statusItem).setCustomButtonListener(((this).buttonPressed).bind(this));
-            ((this).container).addEntry(statusItem);
-            statusItemIndex = ((statusItemIndex) + 1);
-            (statusItemIndex++);
-        } /* while 0xcf55e */
-        naviHeight = (this).getNaviHeight();
-        ((this).container).refreshEntryPositions(4, naviHeight, 8, 0, 0, 0, -1);
-        return;
-};
-        static buttonPressed (self, button) {
-    var statusButton, teamMemberStatus, teamMemberStatusMessage;
-        statusButton = new (GameButton).GameButton(button);
-        teamMemberStatus = (statusButton).id;
-        teamMemberStatusMessage = new (TeamMemberStatusMessage).TeamMemberStatusMessage(teamMemberStatus);
-        ((MessageManager).MessageManager).sendMessage(teamMemberStatusMessage);
-        return;
-};
-        <class_fields_init> = undefined;
-        StatusSelectorPopup;
-        class StatusSelectorPopup extends <class_fields_init> = (ListContainerPopup).ListContainerPopup {
-            constructor () {
-    var this.active_func, new.target;
-        this.active_func = /*special:2*/;
-        new.target = /*special:3*/;
-        this = super({ Title: ((Localisation).Localisation).getString("StatusesPopupTitle") });
-        if (<class_fields_init>) {
-        } /* if 0xcf42f */
-        this.statusesArray = [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-        this.statusItemsCount = 0;
-        (this).adjustPopupHeaderButtons("status_selector");
-        (this).refreshItems();
-        StatusSelectorPopup.instance = this;
-        if (this) {
-            return this;
-        } /* if 0xcf48e (open) */
-}
-        }
-        StatusSelectorPopup = <class_fields_init> = StatusSelectorPopup;
-        exports.StatusSelectorPopup = StatusSelectorPopup;
         return;
 };
 

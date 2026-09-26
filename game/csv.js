@@ -1,9 +1,6 @@
-// =============================================================
-// CSV TABLES
-// merged webpack modules: 3235 CSVTable, 5603 CSVRow, 5151 LogicHeroSetup
-// =============================================================
-
+//============================================================================//// CSV TABLES// merged webpack modules: 3235 CSVTable, 5603 CSVRow, 5151 LogicHeroSetup//============================================================================//
 // --------------------- MODULE 3235 — CSVTable ---------------------
+
 
 // ============================================================ //
 // webpack module 3235  —  CSVTable
@@ -32,6 +29,7 @@ __webpack_modules__[3235] = function CSVTable_factory(__unused_webpack_module, e
 };
 
 // --------------------- MODULE 5603 — CSVRow ---------------------
+
 
 // ============================================================ //
 // webpack module 5603  —  CSVRow
@@ -102,6 +100,7 @@ __webpack_modules__[5603] = function CSVRow_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 5151 — LogicHeroSetup ---------------------
+
 
 // ============================================================ //
 // webpack module 5151  —  LogicHeroSetup

@@ -1,9 +1,6 @@
-// =============================================================
-// COMMANDS
-// merged webpack modules: 7656 LogicCommand, 4484 LogicClaimDailyRewardCommand, 5119 LogicHeroSeenCommand, 4150 LogicItemSeenCommand, 5287 LogicPurchaseOfferCommand, 7933 LogicLaserMessageFactory
-// =============================================================
-
+//============================================================================//// COMMANDS// merged webpack modules: 7656 LogicCommand, 4484 LogicClaimDailyRewardCommand, 5119 LogicHeroSeenCommand, 4150 LogicItemSeenCommand, 5287 LogicPurchaseOfferCommand, 7933 LogicLaserMessageFactory//============================================================================//
 // --------------------- MODULE 7656 — LogicCommand ---------------------
+
 
 // ============================================================ //
 // webpack module 7656  —  LogicCommand
@@ -54,6 +51,7 @@ __webpack_modules__[7656] = function LogicCommand_factory(__unused_webpack_modul
 
 // --------------------- MODULE 4484 — LogicClaimDailyRewardCommand ---------------------
 
+
 // ============================================================ //
 // webpack module 4484  —  LogicClaimDailyRewardCommand
 // exports: LogicClaimDailyRewardCommand
@@ -100,6 +98,7 @@ __webpack_modules__[4484] = function LogicClaimDailyRewardCommand_factory(__unus
 };
 
 // --------------------- MODULE 5119 — LogicHeroSeenCommand ---------------------
+
 
 // ============================================================ //
 // webpack module 5119  —  LogicHeroSeenCommand
@@ -149,6 +148,7 @@ __webpack_modules__[5119] = function LogicHeroSeenCommand_factory(__unused_webpa
 
 // --------------------- MODULE 4150 — LogicItemSeenCommand ---------------------
 
+
 // ============================================================ //
 // webpack module 4150  —  LogicItemSeenCommand
 // exports: LogicItemSeenCommand
@@ -191,6 +191,7 @@ __webpack_modules__[4150] = function LogicItemSeenCommand_factory(__unused_webpa
 
 // --------------------- MODULE 5287 — LogicPurchaseOfferCommand ---------------------
 
+
 // ============================================================ //
 // webpack module 5287  —  LogicPurchaseOfferCommand
 // exports: LogicPurchaseOfferCommand
@@ -221,6 +222,7 @@ __webpack_modules__[5287] = function LogicPurchaseOfferCommand_factory(__unused_
 };
 
 // --------------------- MODULE 7933 — LogicLaserMessageFactory ---------------------
+
 
 // ============================================================ //
 // webpack module 7933  —  LogicLaserMessageFactory

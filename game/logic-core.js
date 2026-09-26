@@ -1,9 +1,6 @@
-// =============================================================
-// LOGIC CORE FRAMEWORK
-// merged webpack modules: 6794 LogicData, 9366 LogicDataSlot, 1612 LogicDataTable, 1724 LogicDataTableResource, 6139 LogicDataTables, 5417 LogicArrayList, 2743 LogicLong, 884 LogicRandom, 1994 LogicTime, 1588 LogicMemory, 1777 LogicClientGlobals
-// =============================================================
-
+//============================================================================//// LOGIC CORE FRAMEWORK// merged webpack modules: 6794 LogicData, 9366 LogicDataSlot, 1612 LogicDataTable, 1724 LogicDataTableResource, 6139 LogicDataTables, 5417 LogicArrayList, 2743 LogicLong, 884 LogicRandom, 1994 LogicTime, 1588 LogicMemory, 1777 LogicClientGlobals//============================================================================//
 // --------------------- MODULE 6794 — LogicData ---------------------
+
 
 // ============================================================ //
 // webpack module 6794  —  LogicData
@@ -153,6 +150,7 @@ __webpack_modules__[6794] = function LogicData_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 9366 — LogicDataSlot ---------------------
 
+
 // ============================================================ //
 // webpack module 9366  —  LogicDataSlot
 // exports: LogicDataSlot
@@ -185,6 +183,7 @@ __webpack_modules__[9366] = function LogicDataSlot_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 1612 — LogicDataTable ---------------------
+
 
 // ============================================================ //
 // webpack module 1612  —  LogicDataTable
@@ -272,6 +271,7 @@ __webpack_modules__[1612] = function LogicDataTable_factory(__unused_webpack_mod
 
 // --------------------- MODULE 1724 — LogicDataTableResource ---------------------
 
+
 // ============================================================ //
 // webpack module 1724  —  LogicDataTableResource
 // exports: LogicDataTableResource
@@ -315,6 +315,7 @@ __webpack_modules__[1724] = function LogicDataTableResource_factory(__unused_web
 };
 
 // --------------------- MODULE 6139 — LogicDataTables ---------------------
+
 
 // ============================================================ //
 // webpack module 6139  —  LogicDataTables
@@ -589,6 +590,7 @@ __webpack_modules__[6139] = function LogicDataTables_factory(__unused_webpack_mo
 
 // --------------------- MODULE 5417 — LogicArrayList ---------------------
 
+
 // ============================================================ //
 // webpack module 5417  —  LogicArrayList
 // exports: LogicArrayList
@@ -746,6 +748,7 @@ __webpack_modules__[5417] = function LogicArrayList_factory(__unused_webpack_mod
 
 // --------------------- MODULE 2743 — LogicLong ---------------------
 
+
 // ============================================================ //
 // webpack module 2743  —  LogicLong
 // exports: LogicLong
@@ -803,6 +806,7 @@ __webpack_modules__[2743] = function LogicLong_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 884 — LogicRandom ---------------------
 
+
 // ============================================================ //
 // webpack module 884  —  LogicRandom
 // exports: LogicRandom
@@ -846,6 +850,7 @@ __webpack_modules__[884] = function LogicRandom_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 1994 — LogicTime ---------------------
+
 
 // ============================================================ //
 // webpack module 1994  —  LogicTime
@@ -900,6 +905,7 @@ __webpack_modules__[1994] = function LogicTime_factory(__unused_webpack_module, 
 };
 
 // --------------------- MODULE 1588 — LogicMemory ---------------------
+
 
 // ============================================================ //
 // webpack module 1588  —  LogicMemory
@@ -990,6 +996,7 @@ __webpack_modules__[1588] = function LogicMemory_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 1777 — LogicClientGlobals ---------------------
+
 
 // ============================================================ //
 // webpack module 1777  —  LogicClientGlobals

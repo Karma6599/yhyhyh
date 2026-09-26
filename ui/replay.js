@@ -1,9 +1,6 @@
-// =============================================================
-// REPLAY UI
-// merged webpack modules: 4111 SharedReplay, 6980 BattleEndReplayScreen
-// =============================================================
-
+//============================================================================//// REPLAY UI// merged webpack modules: 4111 SharedReplay, 6980 BattleEndReplayScreen//============================================================================//
 // --------------------- MODULE 4111 — SharedReplay ---------------------
+
 
 // ============================================================ //
 // webpack module 4111  —  SharedReplay
@@ -242,6 +239,7 @@ __webpack_modules__[4111] = function SharedReplay_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 6980 — BattleEndReplayScreen ---------------------
+
 
 // ============================================================ //
 // webpack module 6980  —  BattleEndReplayScreen

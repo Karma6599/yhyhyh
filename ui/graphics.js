@@ -1,9 +1,6 @@
-// =============================================================
-// GRAPHICS / RENDERING KIT
-// merged webpack modules: 1191 DisplayObject, 612 MovieClip, 3217 Sprite, 1721 ColorTransform, 602 Matrix2x3, 8632 Stage, 7404 MovieClipHelper, 9878 Libg, 6551 EnvironmentRenderer, 3378 SceneRenderer, 7518 Character3D, 3615 MoviePlayerPopup
-// =============================================================
-
+//============================================================================//// GRAPHICS / RENDERING KIT// merged webpack modules: 1191 DisplayObject, 612 MovieClip, 3217 Sprite, 1721 ColorTransform, 602 Matrix2x3, 8632 Stage, 7404 MovieClipHelper, 9878 Libg, 6551 EnvironmentRenderer, 3378 SceneRenderer, 7518 Character3D//============================================================================//
 // --------------------- MODULE 1191 — DisplayObject ---------------------
+
 
 // ============================================================ //
 // webpack module 1191  —  DisplayObject
@@ -252,6 +249,7 @@ __webpack_modules__[1191] = function DisplayObject_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 612 — MovieClip ---------------------
+
 
 // ============================================================ //
 // webpack module 612  —  MovieClip
@@ -512,6 +510,7 @@ __webpack_modules__[612] = function MovieClip_factory(__unused_webpack_module, e
 
 // --------------------- MODULE 3217 — Sprite ---------------------
 
+
 // ============================================================ //
 // webpack module 3217  —  Sprite
 // exports: Sprite, Sprite_removeChild
@@ -593,6 +592,7 @@ __webpack_modules__[3217] = function Sprite_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 1721 — ColorTransform ---------------------
+
 
 // ============================================================ //
 // webpack module 1721  —  ColorTransform
@@ -716,6 +716,7 @@ __webpack_modules__[1721] = function ColorTransform_factory(__unused_webpack_mod
 
 // --------------------- MODULE 602 — Matrix2x3 ---------------------
 
+
 // ============================================================ //
 // webpack module 602  —  Matrix2x3
 // exports: Matrix2x3
@@ -799,6 +800,7 @@ __webpack_modules__[602] = function Matrix2x3_factory(__unused_webpack_module, e
 };
 
 // --------------------- MODULE 8632 — Stage ---------------------
+
 
 // ============================================================ //
 // webpack module 8632  —  Stage
@@ -901,6 +903,7 @@ __webpack_modules__[8632] = function Stage_factory(__unused_webpack_module, expo
 
 // --------------------- MODULE 7404 — MovieClipHelper ---------------------
 
+
 // ============================================================ //
 // webpack module 7404  —  MovieClipHelper
 // exports: MovieClipHelper
@@ -941,6 +944,7 @@ __webpack_modules__[7404] = function MovieClipHelper_factory(__unused_webpack_mo
 };
 
 // --------------------- MODULE 9878 — Libg ---------------------
+
 
 // ============================================================ //
 // webpack module 9878  —  Libg
@@ -1001,6 +1005,7 @@ __webpack_modules__[9878] = function Libg_factory(__unused_webpack_module, expor
 
 // --------------------- MODULE 6551 — EnvironmentRenderer ---------------------
 
+
 // ============================================================ //
 // webpack module 6551  —  EnvironmentRenderer
 // exports: EnvironmentRenderer
@@ -1034,6 +1039,7 @@ __webpack_modules__[6551] = function EnvironmentRenderer_factory(__unused_webpac
 
 // --------------------- MODULE 3378 — SceneRenderer ---------------------
 
+
 // ============================================================ //
 // webpack module 3378  —  SceneRenderer
 // exports: SceneRenderer
@@ -1066,6 +1072,7 @@ __webpack_modules__[3378] = function SceneRenderer_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 7518 — Character3D ---------------------
+
 
 // ============================================================ //
 // webpack module 7518  —  Character3D
@@ -1135,53 +1142,6 @@ __webpack_modules__[7518] = function Character3D_factory(__unused_webpack_module
         Character3D = Breadcrumbs = Character3D;
         exports.Character3D = Character3D;
         Character3D.objectMap = {};
-        return;
-};
-
-// --------------------- MODULE 3615 — MoviePlayerPopup ---------------------
-
-// ============================================================ //
-// webpack module 3615  —  MoviePlayerPopup
-// exports: MoviePlayerPopup
-// deps: 1978 (Libc), 4934 (GUI), 6193 (GenericPopup), 9878 (Libg)
-// ============================================================ //
-
-__webpack_modules__[3615] = function MoviePlayerPopup_factory(__unused_webpack_module, exports, __webpack_require__) {
-    var Libg, Libc, GenericPopup, GUI, MoviePlayerPopup_ctor, MoviePlayerPopup_show, MoviePlayerPopup, <class_fields_init>, MoviePlayerPopup;
-        (Object).defineProperty(exports, "__esModule", { value: true });
-        exports.MoviePlayerPopup = undefined;
-        Libg = __webpack_require__(9878);
-        Libc = __webpack_require__(1978);
-        GenericPopup = __webpack_require__(6193);
-        GUI = __webpack_require__(4934);
-        MoviePlayerPopup_ctor = new NativeFunction(((Libg).Libg).offset(13196904, 0), "void", ["pointer", "int"]);
-        MoviePlayerPopup_show = new NativeFunction(((Libg).Libg).offset(13196788, 0), "void", ["pointer"]);
-        <class_fields_init> = undefined;
-        MoviePlayerPopup;
-        class MoviePlayerPopup extends <class_fields_init> = (GenericPopup).GenericPopup {
-            constructor () {
-    var popupInstance, this.active_func, new.target;
-        this.active_func = /*special:2*/;
-        new.target = /*special:3*/;
-        popupInstance = ((Libc).Libc).calloc((MoviePlayerPopup).allocationSize, 1);
-        MoviePlayerPopup_ctor(popupInstance, 0);
-        this = super(popupInstance);
-        if (<class_fields_init>) {
-        } /* if 0x43cdf */
-        return this;
-}
-            patch () {
-        return;
-}
-            show () {
-    var popup;
-        popup = new MoviePlayerPopup();
-        return;
-}
-        }
-        MoviePlayerPopup = MoviePlayerPopup = MoviePlayerPopup;
-        exports.MoviePlayerPopup = MoviePlayerPopup;
-        MoviePlayerPopup.allocationSize = 424;
         return;
 };
 

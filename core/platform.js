@@ -1,9 +1,6 @@
-// =============================================================
-// PLATFORM BRIDGE (JNI / LIBC / ANDROID)
-// merged webpack modules: 308 AndroidArm64Compatibility, 5952 SafeJNI, 1978 Libc, 3902 NativeDialog, 1128 LogicNativeDialog, 514 LocalNotificationManager, 2635 DeviceSpecifications, 3380 Logcat, 746 EnvOverride
-// =============================================================
-
+//============================================================================//// PLATFORM BRIDGE (JNI / LIBC / ANDROID)// merged webpack modules: 308 AndroidArm64Compatibility, 5952 SafeJNI, 1978 Libc, 3902 NativeDialog, 1128 LogicNativeDialog, 514 LocalNotificationManager, 2635 DeviceSpecifications, 3380 Logcat, 746 EnvOverride//============================================================================//
 // --------------------- MODULE 308 — AndroidArm64Compatibility ---------------------
+
 
 // ============================================================ //
 // webpack module 308  —  AndroidArm64Compatibility
@@ -53,6 +50,7 @@ __webpack_modules__[308] = function AndroidArm64Compatibility_factory(__unused_w
 };
 
 // --------------------- MODULE 5952 — SafeJNI ---------------------
+
 
 // ============================================================ //
 // webpack module 5952  —  SafeJNI
@@ -135,6 +133,7 @@ __webpack_modules__[5952] = function SafeJNI_factory(__unused_webpack_module, ex
 
 // --------------------- MODULE 1978 — Libc ---------------------
 
+
 // ============================================================ //
 // webpack module 1978  —  Libc
 // exports: Libc
@@ -191,6 +190,7 @@ __webpack_modules__[1978] = function Libc_factory(__unused_webpack_module, expor
 };
 
 // --------------------- MODULE 3902 — NativeDialog ---------------------
+
 
 // ============================================================ //
 // webpack module 3902  —  NativeDialog
@@ -249,6 +249,7 @@ __webpack_modules__[3902] = function NativeDialog_factory(__unused_webpack_modul
 
 // --------------------- MODULE 1128 — LogicNativeDialog ---------------------
 
+
 // ============================================================ //
 // webpack module 1128  —  LogicNativeDialog
 // exports: LogicNativeDialog
@@ -289,6 +290,7 @@ __webpack_modules__[1128] = function LogicNativeDialog_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 514 — LocalNotificationManager ---------------------
+
 
 // ============================================================ //
 // webpack module 514  —  LocalNotificationManager
@@ -345,6 +347,7 @@ __webpack_modules__[514] = function LocalNotificationManager_factory(__unused_we
 
 // --------------------- MODULE 2635 — DeviceSpecifications ---------------------
 
+
 // ============================================================ //
 // webpack module 2635  —  DeviceSpecifications
 // exports: DeviceSpecifications
@@ -374,6 +377,7 @@ __webpack_modules__[2635] = function DeviceSpecifications_factory(__unused_webpa
 };
 
 // --------------------- MODULE 3380 — Logcat ---------------------
+
 
 // ============================================================ //
 // webpack module 3380  —  Logcat
@@ -460,6 +464,7 @@ __webpack_modules__[3380] = function Logcat_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 746 — EnvOverride ---------------------
+
 
 // ============================================================ //
 // webpack module 746  —  EnvOverride

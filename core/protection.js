@@ -1,9 +1,6 @@
-// =============================================================
-// PROTECTION / INTEGRITY / TELEMETRY
-// merged webpack modules: 1398 Protector, 4776 IntegrityControl, 7726 TamperStatus, 8669 ApkSignature, 6055 Attestation, 3707 Wendelstein, 4844 SentryFilter, 4419 ExceptionWorker, 4974 Breadcrumbs
-// =============================================================
-
+//============================================================================//// PROTECTION / INTEGRITY / TELEMETRY// merged webpack modules: 1398 Protector, 4776 IntegrityControl, 7726 TamperStatus, 8669 ApkSignature, 6055 Attestation, 3707 Wendelstein, 4844 SentryFilter, 4419 ExceptionWorker, 4974 Breadcrumbs//============================================================================//
 // --------------------- MODULE 1398 — Protector ---------------------
+
 
 // ============================================================ //
 // webpack module 1398  —  Protector
@@ -58,6 +55,7 @@ __webpack_modules__[1398] = function Protector_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 4776 — IntegrityControl ---------------------
 
+
 // ============================================================ //
 // webpack module 4776  —  IntegrityControl
 // exports: IntegrityControl
@@ -91,6 +89,7 @@ __webpack_modules__[4776] = function IntegrityControl_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 7726 — TamperStatus ---------------------
+
 
 // ============================================================ //
 // webpack module 7726  —  TamperStatus
@@ -129,6 +128,7 @@ __webpack_modules__[7726] = function TamperStatus_factory(__unused_webpack_modul
 
 // --------------------- MODULE 8669 — ApkSignature ---------------------
 
+
 // ============================================================ //
 // webpack module 8669  —  ApkSignature
 // exports: ApkSignature
@@ -163,6 +163,7 @@ __webpack_modules__[8669] = function ApkSignature_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 6055 — Attestation ---------------------
+
 
 // ============================================================ //
 // webpack module 6055  —  Attestation
@@ -700,6 +701,7 @@ __webpack_modules__[6055] = function Attestation_factory(__unused_webpack_module
 
 // --------------------- MODULE 3707 — Wendelstein ---------------------
 
+
 // ============================================================ //
 // webpack module 3707  —  Wendelstein
 // exports: wendelstein
@@ -725,6 +727,7 @@ __webpack_modules__[3707] = function Wendelstein_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 4844 — SentryFilter ---------------------
+
 
 // ============================================================ //
 // webpack module 4844  —  SentryFilter
@@ -788,6 +791,7 @@ __webpack_modules__[4844] = function SentryFilter_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 4419 — ExceptionWorker ---------------------
+
 
 // ============================================================ //
 // webpack module 4419  —  ExceptionWorker
@@ -979,6 +983,7 @@ __webpack_modules__[4419] = function ExceptionWorker_factory(__unused_webpack_mo
 };
 
 // --------------------- MODULE 4974 — Breadcrumbs ---------------------
+
 
 // ============================================================ //
 // webpack module 4974  —  Breadcrumbs

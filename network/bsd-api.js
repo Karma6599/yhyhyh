@@ -1,9 +1,6 @@
-// =============================================================
-// BSD+ API CLIENT
-// merged webpack modules: 7474 BSDApi, 6275 BSDHttpClient, 4461 NativeHTTPClient, 1591 NativeHTTPClientManager, 8886 HTTPResponse, 1753 IOSHTTPOffsets
-// =============================================================
-
+//============================================================================//// BSD+ API CLIENT (PLUSAPI.BSD.MEOWFOX.NET, CHACHA20 BODIES)// merged webpack modules: 7474 BSDApi, 6275 BSDHttpClient, 4461 NativeHTTPClient, 1591 NativeHTTPClientManager, 8886 HTTPResponse, 1753 IOSHTTPOffsets//============================================================================//
 // --------------------- MODULE 7474 — BSDApi ---------------------
+
 
 // ============================================================ //
 // webpack module 7474  —  BSDApi
@@ -46,6 +43,7 @@ __webpack_modules__[7474] = function BSDApi_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 6275 — BSDHttpClient ---------------------
+
 
 // ============================================================ //
 // webpack module 6275  —  BSDHttpClient
@@ -330,6 +328,7 @@ __webpack_modules__[6275] = function BSDHttpClient_factory(__unused_webpack_modu
 
 // --------------------- MODULE 4461 — NativeHTTPClient ---------------------
 
+
 // ============================================================ //
 // webpack module 4461  —  NativeHTTPClient
 // exports: NativeHTTPClient
@@ -386,6 +385,7 @@ __webpack_modules__[4461] = function NativeHTTPClient_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 1591 — NativeHTTPClientManager ---------------------
+
 
 // ============================================================ //
 // webpack module 1591  —  NativeHTTPClientManager
@@ -547,6 +547,7 @@ __webpack_modules__[1591] = function NativeHTTPClientManager_factory(__unused_we
 
 // --------------------- MODULE 8886 — HTTPResponse ---------------------
 
+
 // ============================================================ //
 // webpack module 8886  —  HTTPResponse
 // exports: HTTPResponse
@@ -642,6 +643,7 @@ __webpack_modules__[8886] = function HTTPResponse_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 1753 — IOSHTTPOffsets ---------------------
+
 
 // ============================================================ //
 // webpack module 1753  —  IOSHTTPOffsets

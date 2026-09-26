@@ -1,9 +1,6 @@
-// =============================================================
-// MOD CONFIGURATION (SETTINGS POPUP)
-// merged webpack modules: 6893 ModConfiguration, 7428 ModConfigurationItem, 2214 ModProperties
-// =============================================================
-
+//============================================================================//// MOD SETTINGS POPUP (BSD BRAWL SETTINGS) + ITEM FRAMEWORK + MOD PROPERTIES// merged webpack modules: 6893 ModConfiguration, 7428 ModConfigurationItem, 2214 ModProperties//============================================================================//
 // --------------------- MODULE 6893 — ModConfiguration ---------------------
+
 
 // ============================================================ //
 // webpack module 6893  —  ModConfiguration
@@ -186,6 +183,7 @@ __webpack_modules__[6893] = function ModConfiguration_factory(__unused_webpack_m
 
 // --------------------- MODULE 7428 — ModConfigurationItem ---------------------
 
+
 // ============================================================ //
 // webpack module 7428  —  ModConfigurationItem
 // exports: EBehaviour, EModItem, ModConfigurationItem
@@ -362,6 +360,7 @@ __webpack_modules__[7428] = function ModConfigurationItem_factory(__unused_webpa
 };
 
 // --------------------- MODULE 2214 — ModProperties ---------------------
+
 
 // ============================================================ //
 // webpack module 2214  —  ModProperties

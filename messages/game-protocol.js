@@ -1,9 +1,6 @@
-// =============================================================
-// GAME PROTOCOL MESSAGES
-// merged webpack modules: 5532 PiranhaMessage, 4371 LoginMessage, 5485 LoginOkMessage, 8516 LoginFailedMessage, 7351 ServerHelloMessage, 3000 StartLoadingMessage, 8835 GoHomeMessage, 569 SinglePlayerMatchRequestMessage, 1030 CancelMatchmakingMessage, 8134 MatchMakingStatusMessage, 3226 PlayAgainMessage, 980 PlayAgainStatusMessage, 449 PlayerStatusMessage, 5599 TeamMemberStatusMessage, 6041 TeamChatMessage, 8231 FriendListMessage, 6335 AllianceDataMessage, 8321 MyAllianceMessage, 7402 MapPreviewMessage, 8087 LogicDebugButtonMessage, 4509 ViewReplayByStringIdMessage, 8777 UdpConnectionInfoMessage, 9493 AnalyticEvent, 6465 DeliveryUnit, 153 BattleEndMessage, 3498 TeamBotSlotDisableMessage, 4233 DebugBillingRequestMessage
-// =============================================================
-
+//============================================================================//// GAME PROTOCOL MESSAGES (INCL. LOGICDEBUGBUTTONMESSAGE = ALL DEBUG MENU SERVER ACTIONS)// merged webpack modules: 5532 PiranhaMessage, 4371 LoginMessage, 5485 LoginOkMessage, 8516 LoginFailedMessage, 7351 ServerHelloMessage, 3000 StartLoadingMessage, 8835 GoHomeMessage, 569 SinglePlayerMatchRequestMessage, 1030 CancelMatchmakingMessage, 8134 MatchMakingStatusMessage, 3226 PlayAgainMessage, 980 PlayAgainStatusMessage, 449 PlayerStatusMessage, 5599 TeamMemberStatusMessage, 6041 TeamChatMessage, 8231 FriendListMessage, 6335 AllianceDataMessage, 8321 MyAllianceMessage, 7402 MapPreviewMessage, 8087 LogicDebugButtonMessage, 4509 ViewReplayByStringIdMessage, 8777 UdpConnectionInfoMessage, 9493 AnalyticEvent, 6465 DeliveryUnit, 153 BattleEndMessage, 3498 TeamBotSlotDisableMessage, 4233 DebugBillingRequestMessage//============================================================================//
 // --------------------- MODULE 5532 — PiranhaMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 5532  —  PiranhaMessage
@@ -36,6 +33,7 @@ __webpack_modules__[5532] = function PiranhaMessage_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 4371 — LoginMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 4371  —  LoginMessage
@@ -77,6 +75,7 @@ __webpack_modules__[4371] = function LoginMessage_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 5485 — LoginOkMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 5485  —  LoginOkMessage
@@ -146,6 +145,7 @@ __webpack_modules__[5485] = function LoginOkMessage_factory(__unused_webpack_mod
 
 // --------------------- MODULE 8516 — LoginFailedMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 8516  —  LoginFailedMessage
 // exports: LoginFailedMessage
@@ -190,6 +190,7 @@ __webpack_modules__[8516] = function LoginFailedMessage_factory(__unused_webpack
 
 // --------------------- MODULE 7351 — ServerHelloMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 7351  —  ServerHelloMessage
 // exports: ServerHelloMessage
@@ -222,6 +223,7 @@ __webpack_modules__[7351] = function ServerHelloMessage_factory(__unused_webpack
 };
 
 // --------------------- MODULE 3000 — StartLoadingMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 3000  —  StartLoadingMessage
@@ -531,6 +533,7 @@ __webpack_modules__[3000] = function StartLoadingMessage_factory(__unused_webpac
 
 // --------------------- MODULE 8835 — GoHomeMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 8835  —  GoHomeMessage
 // exports: GoHomeMessage
@@ -576,6 +579,7 @@ __webpack_modules__[8835] = function GoHomeMessage_factory(__unused_webpack_modu
 
 // --------------------- MODULE 569 — SinglePlayerMatchRequestMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 569  —  SinglePlayerMatchRequestMessage
 // exports: SinglePlayerMatchRequestMessage
@@ -614,6 +618,7 @@ __webpack_modules__[569] = function SinglePlayerMatchRequestMessage_factory(__un
 
 // --------------------- MODULE 1030 — CancelMatchmakingMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 1030  —  CancelMatchmakingMessage
 // exports: CancelMatchmakingMessage, CancelMatchmakingMessage_ctor
@@ -651,6 +656,7 @@ __webpack_modules__[1030] = function CancelMatchmakingMessage_factory(__unused_w
 };
 
 // --------------------- MODULE 8134 — MatchMakingStatusMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 8134  —  MatchMakingStatusMessage
@@ -692,6 +698,7 @@ __webpack_modules__[8134] = function MatchMakingStatusMessage_factory(__unused_w
 };
 
 // --------------------- MODULE 3226 — PlayAgainMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 3226  —  PlayAgainMessage
@@ -736,6 +743,7 @@ __webpack_modules__[3226] = function PlayAgainMessage_factory(__unused_webpack_m
 
 // --------------------- MODULE 980 — PlayAgainStatusMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 980  —  PlayAgainStatusMessage
 // exports: PlayAgainStatusMessage
@@ -772,6 +780,7 @@ __webpack_modules__[980] = function PlayAgainStatusMessage_factory(__unused_webp
 };
 
 // --------------------- MODULE 449 — PlayerStatusMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 449  —  PlayerStatusMessage
@@ -810,6 +819,7 @@ __webpack_modules__[449] = function PlayerStatusMessage_factory(__unused_webpack
 };
 
 // --------------------- MODULE 5599 — TeamMemberStatusMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 5599  —  TeamMemberStatusMessage
@@ -863,6 +873,7 @@ __webpack_modules__[5599] = function TeamMemberStatusMessage_factory(__unused_we
 
 // --------------------- MODULE 6041 — TeamChatMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 6041  —  TeamChatMessage
 // exports: TeamChatMessage
@@ -897,6 +908,7 @@ __webpack_modules__[6041] = function TeamChatMessage_factory(__unused_webpack_mo
 };
 
 // --------------------- MODULE 8231 — FriendListMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 8231  —  FriendListMessage
@@ -936,6 +948,7 @@ __webpack_modules__[8231] = function FriendListMessage_factory(__unused_webpack_
 
 // --------------------- MODULE 6335 — AllianceDataMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 6335  —  AllianceDataMessage
 // exports: AllianceDataMessage
@@ -973,6 +986,7 @@ __webpack_modules__[6335] = function AllianceDataMessage_factory(__unused_webpac
 };
 
 // --------------------- MODULE 8321 — MyAllianceMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 8321  —  MyAllianceMessage
@@ -1016,6 +1030,7 @@ __webpack_modules__[8321] = function MyAllianceMessage_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 7402 — MapPreviewMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 7402  —  MapPreviewMessage
@@ -1064,6 +1079,7 @@ __webpack_modules__[7402] = function MapPreviewMessage_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 8087 — LogicDebugButtonMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 8087  —  LogicDebugButtonMessage
@@ -1365,6 +1381,7 @@ __webpack_modules__[8087] = function LogicDebugButtonMessage_factory(__unused_we
 
 // --------------------- MODULE 4509 — ViewReplayByStringIdMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 4509  —  ViewReplayByStringIdMessage
 // exports: ViewReplayByStringIdMessage
@@ -1398,6 +1415,7 @@ __webpack_modules__[4509] = function ViewReplayByStringIdMessage_factory(__unuse
 };
 
 // --------------------- MODULE 8777 — UdpConnectionInfoMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 8777  —  UdpConnectionInfoMessage
@@ -1513,6 +1531,7 @@ __webpack_modules__[8777] = function UdpConnectionInfoMessage_factory(__unused_w
 
 // --------------------- MODULE 9493 — AnalyticEvent ---------------------
 
+
 // ============================================================ //
 // webpack module 9493  —  AnalyticEvent
 // exports: AnalyticEvent
@@ -1548,6 +1567,7 @@ __webpack_modules__[9493] = function AnalyticEvent_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 6465 — DeliveryUnit ---------------------
+
 
 // ============================================================ //
 // webpack module 6465  —  DeliveryUnit
@@ -1593,6 +1613,7 @@ __webpack_modules__[6465] = function DeliveryUnit_factory(__unused_webpack_modul
 };
 
 // --------------------- MODULE 153 — BattleEndMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 153  —  BattleEndMessage
@@ -1696,6 +1717,7 @@ __webpack_modules__[153] = function BattleEndMessage_factory(__unused_webpack_mo
 
 // --------------------- MODULE 3498 — TeamBotSlotDisableMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 3498  —  TeamBotSlotDisableMessage
 // exports: TeamBotSlotDisableMessage
@@ -1742,6 +1764,7 @@ __webpack_modules__[3498] = function TeamBotSlotDisableMessage_factory(__unused_
 };
 
 // --------------------- MODULE 4233 — DebugBillingRequestMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 4233  —  DebugBillingRequestMessage

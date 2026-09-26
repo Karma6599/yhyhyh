@@ -1,9 +1,6 @@
-// =============================================================
-// BSD+ API MESSAGES
-// merged webpack modules: 5577 BSDMessage, 7011 BSDReportBattleEndResultsMessage, 2598 BSDSetTitleMessage, 3458 BSDKeepAliveMessage, 1111 GetBSDOnlineMessage, 1874 GetBSDOwnHomeData, 3548 GetBSDUsersByMask, 5548 LogExceptionMessage, 6072 GetBSDBattleProxyMessage, 6761 StartSCUtilsSpectateMessage, 9622 UnlinkTelegramAccountMessage
-// =============================================================
-
+//============================================================================//// BSD+ API MESSAGES// merged webpack modules: 5577 BSDMessage, 7011 BSDReportBattleEndResultsMessage, 2598 BSDSetTitleMessage, 3458 BSDKeepAliveMessage, 1111 GetBSDOnlineMessage, 1874 GetBSDOwnHomeData, 3548 GetBSDUsersByMask, 5548 LogExceptionMessage, 6072 GetBSDBattleProxyMessage, 6761 StartSCUtilsSpectateMessage, 9622 UnlinkTelegramAccountMessage//============================================================================//
 // --------------------- MODULE 5577 — BSDMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 5577  —  BSDMessage
@@ -53,6 +50,7 @@ __webpack_modules__[5577] = function BSDMessage_factory(__unused_webpack_module,
 
 // --------------------- MODULE 7011 — BSDReportBattleEndResultsMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 7011  —  BSDReportBattleEndResultsMessage
 // exports: BSDReportBattleEndResultsMessage
@@ -89,6 +87,7 @@ __webpack_modules__[7011] = function BSDReportBattleEndResultsMessage_factory(__
 };
 
 // --------------------- MODULE 2598 — BSDSetTitleMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 2598  —  BSDSetTitleMessage
@@ -131,6 +130,7 @@ __webpack_modules__[2598] = function BSDSetTitleMessage_factory(__unused_webpack
 
 // --------------------- MODULE 3458 — BSDKeepAliveMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 3458  —  BSDKeepAliveMessage
 // exports: BSDKeepAliveMessage
@@ -169,6 +169,7 @@ __webpack_modules__[3458] = function BSDKeepAliveMessage_factory(__unused_webpac
 
 // --------------------- MODULE 1111 — GetBSDOnlineMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 1111  —  GetBSDOnlineMessage
 // exports: GetBSDOnlineMessage
@@ -206,6 +207,7 @@ __webpack_modules__[1111] = function GetBSDOnlineMessage_factory(__unused_webpac
 
 // --------------------- MODULE 1874 — GetBSDOwnHomeData ---------------------
 
+
 // ============================================================ //
 // webpack module 1874  —  GetBSDOwnHomeData
 // exports: GetBSDOwnHomeData
@@ -242,6 +244,7 @@ __webpack_modules__[1874] = function GetBSDOwnHomeData_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 3548 — GetBSDUsersByMask ---------------------
+
 
 // ============================================================ //
 // webpack module 3548  —  GetBSDUsersByMask
@@ -285,6 +288,7 @@ __webpack_modules__[3548] = function GetBSDUsersByMask_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 5548 — LogExceptionMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 5548  —  LogExceptionMessage
@@ -334,6 +338,7 @@ __webpack_modules__[5548] = function LogExceptionMessage_factory(__unused_webpac
 
 // --------------------- MODULE 6072 — GetBSDBattleProxyMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 6072  —  GetBSDBattleProxyMessage
 // exports: GetBSDBattleProxyMessage
@@ -372,6 +377,7 @@ __webpack_modules__[6072] = function GetBSDBattleProxyMessage_factory(__unused_w
 
 // --------------------- MODULE 6761 — StartSCUtilsSpectateMessage ---------------------
 
+
 // ============================================================ //
 // webpack module 6761  —  StartSCUtilsSpectateMessage
 // exports: StartSCUtilsSpectateMessage
@@ -409,6 +415,7 @@ __webpack_modules__[6761] = function StartSCUtilsSpectateMessage_factory(__unuse
 };
 
 // --------------------- MODULE 9622 — UnlinkTelegramAccountMessage ---------------------
+
 
 // ============================================================ //
 // webpack module 9622  —  UnlinkTelegramAccountMessage

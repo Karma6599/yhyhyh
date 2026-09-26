@@ -1,9 +1,6 @@
-// =============================================================
-// PLAYERS & TEAMS
-// merged webpack modules: 6013 LogicPlayer, 5292 LogicPlayerMap, 6288 LogicPlayerMapUtil, 6006 LogicAvatarHelper, 6153 LogicClientAvatar, 6385 LogicClientHome, 7487 LogicPlayerBattleIntroDetails, 4330 Player, 9518 PlayerInfo, 3293 PlayerProfile, 5522 PlayerMapManager, 3644 TeamManager, 5200 AllianceManager
-// =============================================================
-
+//============================================================================//// PLAYERS & TEAMS// merged webpack modules: 6013 LogicPlayer, 5292 LogicPlayerMap, 6288 LogicPlayerMapUtil, 6006 LogicAvatarHelper, 6153 LogicClientAvatar, 6385 LogicClientHome, 7487 LogicPlayerBattleIntroDetails, 4330 Player, 9518 PlayerInfo, 3293 PlayerProfile, 5522 PlayerMapManager, 3644 TeamManager, 5200 AllianceManager//============================================================================//
 // --------------------- MODULE 6013 — LogicPlayer ---------------------
+
 
 // ============================================================ //
 // webpack module 6013  —  LogicPlayer
@@ -139,6 +136,7 @@ __webpack_modules__[6013] = function LogicPlayer_factory(__unused_webpack_module
 
 // --------------------- MODULE 5292 — LogicPlayerMap ---------------------
 
+
 // ============================================================ //
 // webpack module 5292  —  LogicPlayerMap
 // exports: LogicPlayerMap
@@ -190,6 +188,7 @@ __webpack_modules__[5292] = function LogicPlayerMap_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 6288 — LogicPlayerMapUtil ---------------------
+
 
 // ============================================================ //
 // webpack module 6288  —  LogicPlayerMapUtil
@@ -258,6 +257,7 @@ __webpack_modules__[6288] = function LogicPlayerMapUtil_factory(__unused_webpack
 
 // --------------------- MODULE 6006 — LogicAvatarHelper ---------------------
 
+
 // ============================================================ //
 // webpack module 6006  —  LogicAvatarHelper
 // exports: LogicAvatarHelper
@@ -301,6 +301,7 @@ __webpack_modules__[6006] = function LogicAvatarHelper_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 6153 — LogicClientAvatar ---------------------
+
 
 // ============================================================ //
 // webpack module 6153  —  LogicClientAvatar
@@ -475,6 +476,7 @@ __webpack_modules__[6153] = function LogicClientAvatar_factory(__unused_webpack_
 
 // --------------------- MODULE 6385 — LogicClientHome ---------------------
 
+
 // ============================================================ //
 // webpack module 6385  —  LogicClientHome
 // exports: LogicClientHome
@@ -516,6 +518,7 @@ __webpack_modules__[6385] = function LogicClientHome_factory(__unused_webpack_mo
 };
 
 // --------------------- MODULE 7487 — LogicPlayerBattleIntroDetails ---------------------
+
 
 // ============================================================ //
 // webpack module 7487  —  LogicPlayerBattleIntroDetails
@@ -578,6 +581,7 @@ __webpack_modules__[7487] = function LogicPlayerBattleIntroDetails_factory(__unu
 
 // --------------------- MODULE 4330 — Player ---------------------
 
+
 // ============================================================ //
 // webpack module 4330  —  Player
 // exports: Player
@@ -605,6 +609,7 @@ __webpack_modules__[4330] = function Player_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 9518 — PlayerInfo ---------------------
+
 
 // ============================================================ //
 // webpack module 9518  —  PlayerInfo
@@ -651,6 +656,7 @@ __webpack_modules__[9518] = function PlayerInfo_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 3293 — PlayerProfile ---------------------
+
 
 // ============================================================ //
 // webpack module 3293  —  PlayerProfile
@@ -745,6 +751,7 @@ __webpack_modules__[3293] = function PlayerProfile_factory(__unused_webpack_modu
 
 // --------------------- MODULE 5522 — PlayerMapManager ---------------------
 
+
 // ============================================================ //
 // webpack module 5522  —  PlayerMapManager
 // exports: PlayerMapManager
@@ -775,6 +782,7 @@ __webpack_modules__[5522] = function PlayerMapManager_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 3644 — TeamManager ---------------------
+
 
 // ============================================================ //
 // webpack module 3644  —  TeamManager
@@ -849,6 +857,7 @@ __webpack_modules__[3644] = function TeamManager_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 5200 — AllianceManager ---------------------
+
 
 // ============================================================ //
 // webpack module 5200  —  AllianceManager

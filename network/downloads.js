@@ -1,9 +1,6 @@
-// =============================================================
-// DOWNLOADS & ASSETS
-// merged webpack modules: 783 DownloadManager, 1357 GameDownloadManager, 6224 DownloadedImage, 5212 ResourceManager, 2588 AAsset, 5238 IOSDownloader
-// =============================================================
-
+//============================================================================//// DOWNLOADS & ASSETS// merged webpack modules: 783 DownloadManager, 1357 GameDownloadManager, 6224 DownloadedImage, 5212 ResourceManager, 2588 AAsset, 5238 IOSDownloader//============================================================================//
 // --------------------- MODULE 783 — DownloadManager ---------------------
+
 
 // ============================================================ //
 // webpack module 783  —  DownloadManager
@@ -191,6 +188,7 @@ __webpack_modules__[783] = function DownloadManager_factory(__unused_webpack_mod
 
 // --------------------- MODULE 1357 — GameDownloadManager ---------------------
 
+
 // ============================================================ //
 // webpack module 1357  —  GameDownloadManager
 // exports: GameDownloadManager
@@ -230,6 +228,7 @@ __webpack_modules__[1357] = function GameDownloadManager_factory(__unused_webpac
 };
 
 // --------------------- MODULE 6224 — DownloadedImage ---------------------
+
 
 // ============================================================ //
 // webpack module 6224  —  DownloadedImage
@@ -304,6 +303,7 @@ __webpack_modules__[6224] = function DownloadedImage_factory(__unused_webpack_mo
 
 // --------------------- MODULE 5212 — ResourceManager ---------------------
 
+
 // ============================================================ //
 // webpack module 5212  —  ResourceManager
 // exports: ResourceManager
@@ -337,6 +337,7 @@ __webpack_modules__[5212] = function ResourceManager_factory(__unused_webpack_mo
 
 // --------------------- MODULE 2588 — AAsset ---------------------
 
+
 // ============================================================ //
 // webpack module 2588  —  AAsset
 // exports: AAsset
@@ -367,6 +368,7 @@ __webpack_modules__[2588] = function AAsset_factory(__unused_webpack_module, exp
 };
 
 // --------------------- MODULE 5238 — IOSDownloader ---------------------
+
 
 // ============================================================ //
 // webpack module 5238  —  IOSDownloader

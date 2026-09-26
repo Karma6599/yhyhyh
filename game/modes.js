@@ -1,9 +1,6 @@
-// =============================================================
-// GAME MODES
-// merged webpack modules: 6128 BattleMode, 1018 HomeMode, 4801 LogicHomeMode, 9515 LogicGameModeUtil, 9005 BattleTraining, 2241 BattleIntro
-// =============================================================
-
+//============================================================================//// GAME MODES// merged webpack modules: 6128 BattleMode, 1018 HomeMode, 4801 LogicHomeMode, 9515 LogicGameModeUtil, 9005 BattleTraining, 2241 BattleIntro//============================================================================//
 // --------------------- MODULE 6128 — BattleMode ---------------------
+
 
 // ============================================================ //
 // webpack module 6128  —  BattleMode
@@ -59,6 +56,7 @@ __webpack_modules__[6128] = function BattleMode_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 1018 — HomeMode ---------------------
+
 
 // ============================================================ //
 // webpack module 1018  —  HomeMode
@@ -181,6 +179,7 @@ __webpack_modules__[1018] = function HomeMode_factory(__unused_webpack_module, e
 
 // --------------------- MODULE 4801 — LogicHomeMode ---------------------
 
+
 // ============================================================ //
 // webpack module 4801  —  LogicHomeMode
 // exports: LogicHomeMode
@@ -227,6 +226,7 @@ __webpack_modules__[4801] = function LogicHomeMode_factory(__unused_webpack_modu
 
 // --------------------- MODULE 9515 — LogicGameModeUtil ---------------------
 
+
 // ============================================================ //
 // webpack module 9515  —  LogicGameModeUtil
 // exports: LogicGameModeUtil
@@ -265,6 +265,7 @@ __webpack_modules__[9515] = function LogicGameModeUtil_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 9005 — BattleTraining ---------------------
+
 
 // ============================================================ //
 // webpack module 9005  —  BattleTraining
@@ -323,6 +324,7 @@ __webpack_modules__[9005] = function BattleTraining_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 2241 — BattleIntro ---------------------
+
 
 // ============================================================ //
 // webpack module 2241  —  BattleIntro

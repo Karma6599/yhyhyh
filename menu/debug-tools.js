@@ -1,9 +1,6 @@
-// =============================================================
-// DEBUG TOOLING
-// merged webpack modules: 1390 DebugCallbacks, 313 Debugger, 4272 EDebugger, 118 DebugGameButton, 1019 DebugCommandButton, 6118 DebugRecents, 3256 DebugSearch, 2447 StageDebugText, 6045 CommandLogger
-// =============================================================
-
+//============================================================================//// DEBUGCALLBACKS — THE DEBUG MENU HANDLER REGISTRY (85 METHODS) + MISC TOOLING// merged webpack modules: 1390 DebugCallbacks, 313 Debugger, 4272 EDebugger, 118 DebugGameButton, 1019 DebugCommandButton, 6118 DebugRecents, 3256 DebugSearch, 2447 StageDebugText, 6045 CommandLogger//============================================================================//
 // --------------------- MODULE 1390 — DebugCallbacks ---------------------
+
 
 // ============================================================ //
 // webpack module 1390  —  DebugCallbacks
@@ -548,6 +545,7 @@ __webpack_modules__[1390] = function DebugCallbacks_factory(__unused_webpack_mod
 
 // --------------------- MODULE 313 — Debugger ---------------------
 
+
 // ============================================================ //
 // webpack module 313  —  Debugger
 // exports: Debugger
@@ -603,6 +601,7 @@ __webpack_modules__[313] = function Debugger_factory(__unused_webpack_module, ex
 };
 
 // --------------------- MODULE 4272 — EDebugger ---------------------
+
 
 // ============================================================ //
 // webpack module 4272  —  EDebugger
@@ -776,6 +775,7 @@ __webpack_modules__[4272] = function EDebugger_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 118 — DebugGameButton ---------------------
 
+
 // ============================================================ //
 // webpack module 118  —  DebugGameButton
 // exports: DebugGameButton
@@ -873,6 +873,7 @@ __webpack_modules__[118] = function DebugGameButton_factory(__unused_webpack_mod
 
 // --------------------- MODULE 1019 — DebugCommandButton ---------------------
 
+
 // ============================================================ //
 // webpack module 1019  —  DebugCommandButton
 // exports: DebugCommandButton
@@ -920,6 +921,7 @@ __webpack_modules__[1019] = function DebugCommandButton_factory(__unused_webpack
 };
 
 // --------------------- MODULE 6118 — DebugRecents ---------------------
+
 
 // ============================================================ //
 // webpack module 6118  —  DebugRecents
@@ -971,6 +973,7 @@ __webpack_modules__[6118] = function DebugRecents_factory(__unused_webpack_modul
 
 // --------------------- MODULE 3256 — DebugSearch ---------------------
 
+
 // ============================================================ //
 // webpack module 3256  —  DebugSearch
 // exports: DebugSearch
@@ -1021,6 +1024,7 @@ __webpack_modules__[3256] = function DebugSearch_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 2447 — StageDebugText ---------------------
+
 
 // ============================================================ //
 // webpack module 2447  —  StageDebugText
@@ -1085,6 +1089,7 @@ __webpack_modules__[2447] = function StageDebugText_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 6045 — CommandLogger ---------------------
+
 
 // ============================================================ //
 // webpack module 6045  —  CommandLogger

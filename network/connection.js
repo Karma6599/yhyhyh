@@ -1,9 +1,6 @@
-// =============================================================
-// SERVER CONNECTION & MESSAGING
-// merged webpack modules: 8129 ServerConnection, 7324 Messaging, 9168 MessageManager, 5281 BSDMessageManager, 8286 MessageSignatureManager
-// =============================================================
-
+//============================================================================//// SERVER CONNECTION & MESSAGING// merged webpack modules: 8129 ServerConnection, 7324 Messaging, 9168 MessageManager, 5281 BSDMessageManager, 8286 MessageSignatureManager//============================================================================//
 // --------------------- MODULE 8129 — ServerConnection ---------------------
+
 
 // ============================================================ //
 // webpack module 8129  —  ServerConnection
@@ -59,6 +56,7 @@ __webpack_modules__[8129] = function ServerConnection_factory(__unused_webpack_m
 
 // --------------------- MODULE 7324 — Messaging ---------------------
 
+
 // ============================================================ //
 // webpack module 7324  —  Messaging
 // exports: Messaging
@@ -105,6 +103,7 @@ __webpack_modules__[7324] = function Messaging_factory(__unused_webpack_module, 
 };
 
 // --------------------- MODULE 9168 — MessageManager ---------------------
+
 
 // ============================================================ //
 // webpack module 9168  —  MessageManager
@@ -346,6 +345,7 @@ __webpack_modules__[9168] = function MessageManager_factory(__unused_webpack_mod
 
 // --------------------- MODULE 5281 — BSDMessageManager ---------------------
 
+
 // ============================================================ //
 // webpack module 5281  —  BSDMessageManager
 // exports: BSDMessageManager
@@ -531,6 +531,7 @@ __webpack_modules__[5281] = function BSDMessageManager_factory(__unused_webpack_
 };
 
 // --------------------- MODULE 8286 — MessageSignatureManager ---------------------
+
 
 // ============================================================ //
 // webpack module 8286  —  MessageSignatureManager

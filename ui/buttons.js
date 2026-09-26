@@ -1,9 +1,6 @@
-// =============================================================
-// BUTTONS
-// merged webpack modules: 5039 GameButton, 6851 CustomButton, 9445 RadioButton, 120 GameSliderComponent
-// =============================================================
-
+//============================================================================//// BUTTONS// merged webpack modules: 5039 GameButton, 6851 CustomButton, 9445 RadioButton, 120 GameSliderComponent//============================================================================//
 // --------------------- MODULE 5039 — GameButton ---------------------
+
 
 // ============================================================ //
 // webpack module 5039  —  GameButton
@@ -73,6 +70,7 @@ __webpack_modules__[5039] = function GameButton_factory(__unused_webpack_module,
 };
 
 // --------------------- MODULE 6851 — CustomButton ---------------------
+
 
 // ============================================================ //
 // webpack module 6851  —  CustomButton
@@ -298,6 +296,7 @@ __webpack_modules__[6851] = function CustomButton_factory(__unused_webpack_modul
 
 // --------------------- MODULE 9445 — RadioButton ---------------------
 
+
 // ============================================================ //
 // webpack module 9445  —  RadioButton
 // exports: RadioButton
@@ -354,6 +353,7 @@ __webpack_modules__[9445] = function RadioButton_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 120 — GameSliderComponent ---------------------
+
 
 // ============================================================ //
 // webpack module 120  —  GameSliderComponent

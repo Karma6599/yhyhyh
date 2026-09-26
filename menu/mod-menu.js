@@ -1,9 +1,6 @@
-// =============================================================
-// MOD MENU
-// merged webpack modules: 8203 ModMenu, 8016 ModMenuLegacy, 5565 ModMenuItem
-// =============================================================
-
+//============================================================================//// MOD MENU POPUP FRAMEWORK (TABS LOBBY/BATTLE/OTHER/CONFIG + LEGACY LIST MENU)// merged webpack modules: 8203 ModMenu, 8016 ModMenuLegacy, 5565 ModMenuItem//============================================================================//
 // --------------------- MODULE 8203 — ModMenu ---------------------
+
 
 // ============================================================ //
 // webpack module 8203  —  ModMenu
@@ -467,6 +464,7 @@ __webpack_modules__[8203] = function ModMenu_factory(__unused_webpack_module, ex
 
 // --------------------- MODULE 8016 — ModMenuLegacy ---------------------
 
+
 // ============================================================ //
 // webpack module 8016  —  ModMenuLegacy
 // exports: ModMenuPopupLegacy
@@ -627,6 +625,7 @@ __webpack_modules__[8016] = function ModMenuLegacy_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 5565 — ModMenuItem ---------------------
+
 
 // ============================================================ //
 // webpack module 5565  —  ModMenuItem

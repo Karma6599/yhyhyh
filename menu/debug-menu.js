@@ -1,9 +1,6 @@
-// =============================================================
-// DEBUG MENU
-// merged webpack modules: 8667 DebugMenu, 566 DebugMenuBase, 8892 DebugMenuButton, 8048 DebugMenuCategory, 6670 DebugMenuState, 8139 ToggleDebugMenuButton, 6242 DebugButtonSpecs, 4595 CategoryManagementPopup
-// =============================================================
-
+//============================================================================//// DEBUG MENU FRAMEWORK + ALL 178 BUTTON SPECS (DEBUGBUTTONSPECS) + CATEGORIES// merged webpack modules: 8667 DebugMenu, 566 DebugMenuBase, 8892 DebugMenuButton, 8048 DebugMenuCategory, 6670 DebugMenuState, 6242 DebugButtonSpecs, 4595 CategoryManagementPopup//============================================================================//
 // --------------------- MODULE 8667 — DebugMenu ---------------------
+
 
 // ============================================================ //
 // webpack module 8667  —  DebugMenu
@@ -484,6 +481,7 @@ __webpack_modules__[8667] = function DebugMenu_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 566 — DebugMenuBase ---------------------
 
+
 // ============================================================ //
 // webpack module 566  —  DebugMenuBase
 // exports: DebugMenuBase
@@ -923,6 +921,7 @@ __webpack_modules__[566] = function DebugMenuBase_factory(__unused_webpack_modul
 
 // --------------------- MODULE 8892 — DebugMenuButton ---------------------
 
+
 // ============================================================ //
 // webpack module 8892  —  DebugMenuButton
 // exports: DebugMenuButton
@@ -1047,6 +1046,7 @@ __webpack_modules__[8892] = function DebugMenuButton_factory(__unused_webpack_mo
 
 // --------------------- MODULE 8048 — DebugMenuCategory ---------------------
 
+
 // ============================================================ //
 // webpack module 8048  —  DebugMenuCategory
 // exports: DebugMenuCategory, EDebugCategory
@@ -1116,6 +1116,7 @@ __webpack_modules__[8048] = function DebugMenuCategory_factory(__unused_webpack_
 
 // --------------------- MODULE 6670 — DebugMenuState ---------------------
 
+
 // ============================================================ //
 // webpack module 6670  —  DebugMenuState
 // exports: DebugMenuState
@@ -1140,47 +1141,8 @@ __webpack_modules__[6670] = function DebugMenuState_factory(__unused_webpack_mod
         return;
 };
 
-// --------------------- MODULE 8139 — ToggleDebugMenuButton ---------------------
-
-// ============================================================ //
-// webpack module 8139  —  ToggleDebugMenuButton
-// exports: ToggleDebugMenuButton
-// deps: 118 (DebugGameButton), 8892 (DebugMenuButton)
-// ============================================================ //
-
-__webpack_modules__[8139] = function ToggleDebugMenuButton_factory(__unused_webpack_module, exports, __webpack_require__) {
-    var DebugGameButton, DebugMenuButton, ToggleDebugMenuButton, <class_fields_init>, ToggleDebugMenuButton;
-        (Object).defineProperty(exports, "__esModule", { value: true });
-        exports.ToggleDebugMenuButton = undefined;
-        DebugGameButton = __webpack_require__(118);
-        DebugMenuButton = __webpack_require__(8892);
-        static callback () {
-        if (((((DebugMenuButton).DebugMenuButton).getDebugMenu()) == null)) {
-            ((DebugMenuButton).DebugMenuButton).getDebugMenu();
-        } /* if 0xdd23c */
-        /* jump -> 0xdd244 */
-        return;
-};
-        <class_fields_init> = undefined;
-        ToggleDebugMenuButton;
-        class ToggleDebugMenuButton extends <class_fields_init> = (DebugGameButton).DebugGameButton {
-            constructor () {
-    var this.active_func, new.target;
-        this.active_func = /*special:2*/;
-        new.target = /*special:3*/;
-        this = super();
-        if (<class_fields_init>) {
-        } /* if 0xdd1e6 */
-        (this).setCustomButtonListener(((this).callback).bind(this));
-        return this;
-}
-        }
-        ToggleDebugMenuButton = ToggleDebugMenuButton = ToggleDebugMenuButton;
-        exports.ToggleDebugMenuButton = ToggleDebugMenuButton;
-        return;
-};
-
 // --------------------- MODULE 6242 — DebugButtonSpecs ---------------------
+
 
 // ============================================================ //
 // webpack module 6242  —  DebugButtonSpecs
@@ -1604,6 +1566,7 @@ __webpack_modules__[6242] = function DebugButtonSpecs_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 4595 — CategoryManagementPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 4595  —  CategoryManagementPopup

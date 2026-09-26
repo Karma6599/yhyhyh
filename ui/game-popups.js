@@ -1,9 +1,6 @@
-// =============================================================
-// RECREATED GAME POPUPS
-// merged webpack modules: 950 BattleEndPopup, 1054 HeroCollectionPopup, 3098 HeroScreenPopup, 2015 NotEnoughGemsPopup, 3747 NotificationSettingsPopup, 296 EventDetailsPopup, 3570 FameLevelUpPopup, 275 FamePopup, 3173 FirstGearTutorialPopup, 3197 RankedSeasonEndPopup, 3196 BrawlPassAutoCollectRewardsPopup, 9102 BrawlPassUnlockBrawlerPopup, 8058 BrawlTvIntroPopup, 3572 BrawlTvIntroPopupPreview, 2921 RewardCompensationPopup, 7135 RewardOpeningPopup, 8781 RecruitRoadClaimBrawlerPopup, 898 InviteFriendWithCodePopup, 6555 PlayerCountryPopup, 366 PrestigeSelectorPopup, 8196 PrestigeLevelUpPopup, 6642 PrestigeIntroPopupPreview, 2695 CelebrationPopupPreview, 1058 PreviewBrawlerOrSkinRewardPopup, 4210 AccountDeletionDialogPreview, 7284 ChatOptionsPopup, 7300 MaintenancePopupPreview, 8548 DebugCountryPopupPreview, 3117 CollabDrop, 3567 EsportTournamentsPopup, 33 SettingsPopup, 303 SettingsPrivacyScreen, 7591 SettingsScreen, 3004 CameraSettingsPopup, 2760 BadgePreview, 4401 TeamPopup, 7311 PassRewardPreview
-// =============================================================
-
+//============================================================================//// RECREATED GAME POPUPS (ALSO USED BY DEBUG MENU PREVIEW BUTTONS)// merged webpack modules: 950 BattleEndPopup, 1054 HeroCollectionPopup, 3098 HeroScreenPopup, 2015 NotEnoughGemsPopup, 3747 NotificationSettingsPopup, 296 EventDetailsPopup, 3570 FameLevelUpPopup, 275 FamePopup, 3173 FirstGearTutorialPopup, 3197 RankedSeasonEndPopup, 3196 BrawlPassAutoCollectRewardsPopup, 9102 BrawlPassUnlockBrawlerPopup, 8058 BrawlTvIntroPopup, 3572 BrawlTvIntroPopupPreview, 2921 RewardCompensationPopup, 7135 RewardOpeningPopup, 8781 RecruitRoadClaimBrawlerPopup, 898 InviteFriendWithCodePopup, 6555 PlayerCountryPopup, 366 PrestigeSelectorPopup, 8196 PrestigeLevelUpPopup, 6642 PrestigeIntroPopupPreview, 2695 CelebrationPopupPreview, 1058 PreviewBrawlerOrSkinRewardPopup, 4210 AccountDeletionDialogPreview, 7284 ChatOptionsPopup, 7300 MaintenancePopupPreview, 8548 DebugCountryPopupPreview, 3117 CollabDrop, 3567 EsportTournamentsPopup, 33 SettingsPopup, 303 SettingsPrivacyScreen, 7591 SettingsScreen, 3004 CameraSettingsPopup, 2760 BadgePreview, 4401 TeamPopup, 7311 PassRewardPreview, 3615 MoviePlayerPopup//============================================================================//
 // --------------------- MODULE 950 — BattleEndPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 950  —  BattleEndPopup
@@ -55,6 +52,7 @@ __webpack_modules__[950] = function BattleEndPopup_factory(__unused_webpack_modu
 };
 
 // --------------------- MODULE 1054 — HeroCollectionPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 1054  —  HeroCollectionPopup
@@ -197,6 +195,7 @@ __webpack_modules__[1054] = function HeroCollectionPopup_factory(__unused_webpac
 
 // --------------------- MODULE 3098 — HeroScreenPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 3098  —  HeroScreenPopup
 // exports: HeroScreenPopup
@@ -311,6 +310,7 @@ __webpack_modules__[3098] = function HeroScreenPopup_factory(__unused_webpack_mo
 
 // --------------------- MODULE 2015 — NotEnoughGemsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 2015  —  NotEnoughGemsPopup
 // exports: NotEnoughGemsPopup
@@ -357,6 +357,7 @@ __webpack_modules__[2015] = function NotEnoughGemsPopup_factory(__unused_webpack
 
 // --------------------- MODULE 3747 — NotificationSettingsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 3747  —  NotificationSettingsPopup
 // exports: NotificationSettingsPopup
@@ -400,6 +401,7 @@ __webpack_modules__[3747] = function NotificationSettingsPopup_factory(__unused_
 
 // --------------------- MODULE 296 — EventDetailsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 296  —  EventDetailsPopup
 // exports: EventDetailsPopup
@@ -435,6 +437,7 @@ __webpack_modules__[296] = function EventDetailsPopup_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 3570 — FameLevelUpPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 3570  —  FameLevelUpPopup
@@ -472,6 +475,7 @@ __webpack_modules__[3570] = function FameLevelUpPopup_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 275 — FamePopup ---------------------
+
 
 // ============================================================ //
 // webpack module 275  —  FamePopup
@@ -527,6 +531,7 @@ __webpack_modules__[275] = function FamePopup_factory(__unused_webpack_module, e
 
 // --------------------- MODULE 3173 — FirstGearTutorialPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 3173  —  FirstGearTutorialPopup
 // exports: FirstGearTutorialPopup
@@ -569,6 +574,7 @@ __webpack_modules__[3173] = function FirstGearTutorialPopup_factory(__unused_web
 };
 
 // --------------------- MODULE 3197 — RankedSeasonEndPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 3197  —  RankedSeasonEndPopup
@@ -632,6 +638,7 @@ __webpack_modules__[3197] = function RankedSeasonEndPopup_factory(__unused_webpa
 
 // --------------------- MODULE 3196 — BrawlPassAutoCollectRewardsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 3196  —  BrawlPassAutoCollectRewardsPopup
 // exports: BrawlPassAutoCollectRewardsPopup
@@ -673,6 +680,7 @@ __webpack_modules__[3196] = function BrawlPassAutoCollectRewardsPopup_factory(__
 
 // --------------------- MODULE 9102 — BrawlPassUnlockBrawlerPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 9102  —  BrawlPassUnlockBrawlerPopup
 // exports: BrawlPassUnlockBrawlerPopup
@@ -707,6 +715,7 @@ __webpack_modules__[9102] = function BrawlPassUnlockBrawlerPopup_factory(__unuse
 };
 
 // --------------------- MODULE 8058 — BrawlTvIntroPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 8058  —  BrawlTvIntroPopup
@@ -745,6 +754,7 @@ __webpack_modules__[8058] = function BrawlTvIntroPopup_factory(__unused_webpack_
 
 // --------------------- MODULE 3572 — BrawlTvIntroPopupPreview ---------------------
 
+
 // ============================================================ //
 // webpack module 3572  —  BrawlTvIntroPopupPreview
 // exports: BrawlTvIntroPopupPreview
@@ -782,6 +792,7 @@ __webpack_modules__[3572] = function BrawlTvIntroPopupPreview_factory(__unused_w
 
 // --------------------- MODULE 2921 — RewardCompensationPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 2921  —  RewardCompensationPopup
 // exports: RewardCompensationPopup
@@ -818,6 +829,7 @@ __webpack_modules__[2921] = function RewardCompensationPopup_factory(__unused_we
 };
 
 // --------------------- MODULE 7135 — RewardOpeningPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 7135  —  RewardOpeningPopup
@@ -933,6 +945,7 @@ __webpack_modules__[7135] = function RewardOpeningPopup_factory(__unused_webpack
 
 // --------------------- MODULE 8781 — RecruitRoadClaimBrawlerPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 8781  —  RecruitRoadClaimBrawlerPopup
 // exports: RecruitRoadClaimBrawlerPopup
@@ -972,6 +985,7 @@ __webpack_modules__[8781] = function RecruitRoadClaimBrawlerPopup_factory(__unus
 };
 
 // --------------------- MODULE 898 — InviteFriendWithCodePopup ---------------------
+
 
 // ============================================================ //
 // webpack module 898  —  InviteFriendWithCodePopup
@@ -1016,6 +1030,7 @@ __webpack_modules__[898] = function InviteFriendWithCodePopup_factory(__unused_w
 
 // --------------------- MODULE 6555 — PlayerCountryPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 6555  —  PlayerCountryPopup
 // exports: PlayerCountryPopup
@@ -1052,6 +1067,7 @@ __webpack_modules__[6555] = function PlayerCountryPopup_factory(__unused_webpack
 };
 
 // --------------------- MODULE 366 — PrestigeSelectorPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 366  —  PrestigeSelectorPopup
@@ -1118,6 +1134,7 @@ __webpack_modules__[366] = function PrestigeSelectorPopup_factory(__unused_webpa
 
 // --------------------- MODULE 8196 — PrestigeLevelUpPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 8196  —  PrestigeLevelUpPopup
 // exports: PrestigeLevelUpPopup
@@ -1154,6 +1171,7 @@ __webpack_modules__[8196] = function PrestigeLevelUpPopup_factory(__unused_webpa
 };
 
 // --------------------- MODULE 6642 — PrestigeIntroPopupPreview ---------------------
+
 
 // ============================================================ //
 // webpack module 6642  —  PrestigeIntroPopupPreview
@@ -1213,6 +1231,7 @@ __webpack_modules__[6642] = function PrestigeIntroPopupPreview_factory(__unused_
 
 // --------------------- MODULE 2695 — CelebrationPopupPreview ---------------------
 
+
 // ============================================================ //
 // webpack module 2695  —  CelebrationPopupPreview
 // exports: CelebrationPopupPreview
@@ -1251,6 +1270,7 @@ __webpack_modules__[2695] = function CelebrationPopupPreview_factory(__unused_we
 };
 
 // --------------------- MODULE 1058 — PreviewBrawlerOrSkinRewardPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 1058  —  PreviewBrawlerOrSkinRewardPopup
@@ -1291,6 +1311,7 @@ __webpack_modules__[1058] = function PreviewBrawlerOrSkinRewardPopup_factory(__u
 };
 
 // --------------------- MODULE 4210 — AccountDeletionDialogPreview ---------------------
+
 
 // ============================================================ //
 // webpack module 4210  —  AccountDeletionDialogPreview
@@ -1381,6 +1402,7 @@ __webpack_modules__[4210] = function AccountDeletionDialogPreview_factory(__unus
 
 // --------------------- MODULE 7284 — ChatOptionsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 7284  —  ChatOptionsPopup
 // exports: ChatOptionsPopup
@@ -1411,6 +1433,7 @@ __webpack_modules__[7284] = function ChatOptionsPopup_factory(__unused_webpack_m
 };
 
 // --------------------- MODULE 7300 — MaintenancePopupPreview ---------------------
+
 
 // ============================================================ //
 // webpack module 7300  —  MaintenancePopupPreview
@@ -1599,6 +1622,7 @@ __webpack_modules__[7300] = function MaintenancePopupPreview_factory(__unused_we
 
 // --------------------- MODULE 8548 — DebugCountryPopupPreview ---------------------
 
+
 // ============================================================ //
 // webpack module 8548  —  DebugCountryPopupPreview
 // exports: DebugCountryPopupPreview
@@ -1629,6 +1653,7 @@ __webpack_modules__[8548] = function DebugCountryPopupPreview_factory(__unused_w
 };
 
 // --------------------- MODULE 3117 — CollabDrop ---------------------
+
 
 // ============================================================ //
 // webpack module 3117  —  CollabDrop
@@ -1680,6 +1705,7 @@ __webpack_modules__[3117] = function CollabDrop_factory(__unused_webpack_module,
 
 // --------------------- MODULE 3567 — EsportTournamentsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 3567  —  EsportTournamentsPopup
 // exports: EsportTournamentsPopup
@@ -1723,6 +1749,7 @@ __webpack_modules__[3567] = function EsportTournamentsPopup_factory(__unused_web
 
 // --------------------- MODULE 33 — SettingsPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 33  —  SettingsPopup
 // exports: SettingsPopup
@@ -1753,6 +1780,7 @@ __webpack_modules__[33] = function SettingsPopup_factory(__unused_webpack_module
 };
 
 // --------------------- MODULE 303 — SettingsPrivacyScreen ---------------------
+
 
 // ============================================================ //
 // webpack module 303  —  SettingsPrivacyScreen
@@ -1813,6 +1841,7 @@ __webpack_modules__[303] = function SettingsPrivacyScreen_factory(__unused_webpa
 };
 
 // --------------------- MODULE 7591 — SettingsScreen ---------------------
+
 
 // ============================================================ //
 // webpack module 7591  —  SettingsScreen
@@ -1884,6 +1913,7 @@ __webpack_modules__[7591] = function SettingsScreen_factory(__unused_webpack_mod
 };
 
 // --------------------- MODULE 3004 — CameraSettingsPopup ---------------------
+
 
 // ============================================================ //
 // webpack module 3004  —  CameraSettingsPopup
@@ -2098,6 +2128,7 @@ __webpack_modules__[3004] = function CameraSettingsPopup_factory(__unused_webpac
 
 // --------------------- MODULE 2760 — BadgePreview ---------------------
 
+
 // ============================================================ //
 // webpack module 2760  —  BadgePreview
 // exports: BadgePreview
@@ -2178,6 +2209,7 @@ __webpack_modules__[2760] = function BadgePreview_factory(__unused_webpack_modul
 
 // --------------------- MODULE 4401 — TeamPopup ---------------------
 
+
 // ============================================================ //
 // webpack module 4401  —  TeamPopup
 // exports: TeamPopup
@@ -2251,6 +2283,7 @@ __webpack_modules__[4401] = function TeamPopup_factory(__unused_webpack_module, 
 
 // --------------------- MODULE 7311 — PassRewardPreview ---------------------
 
+
 // ============================================================ //
 // webpack module 7311  —  PassRewardPreview
 // exports: PassRewardPreview
@@ -2292,6 +2325,54 @@ __webpack_modules__[7311] = function PassRewardPreview_factory(__unused_webpack_
         }
         PassRewardPreview = PassRewardPreview = PassRewardPreview;
         exports.PassRewardPreview = PassRewardPreview;
+        return;
+};
+
+// --------------------- MODULE 3615 — MoviePlayerPopup ---------------------
+
+
+// ============================================================ //
+// webpack module 3615  —  MoviePlayerPopup
+// exports: MoviePlayerPopup
+// deps: 1978 (Libc), 4934 (GUI), 6193 (GenericPopup), 9878 (Libg)
+// ============================================================ //
+
+__webpack_modules__[3615] = function MoviePlayerPopup_factory(__unused_webpack_module, exports, __webpack_require__) {
+    var Libg, Libc, GenericPopup, GUI, MoviePlayerPopup_ctor, MoviePlayerPopup_show, MoviePlayerPopup, <class_fields_init>, MoviePlayerPopup;
+        (Object).defineProperty(exports, "__esModule", { value: true });
+        exports.MoviePlayerPopup = undefined;
+        Libg = __webpack_require__(9878);
+        Libc = __webpack_require__(1978);
+        GenericPopup = __webpack_require__(6193);
+        GUI = __webpack_require__(4934);
+        MoviePlayerPopup_ctor = new NativeFunction(((Libg).Libg).offset(13196904, 0), "void", ["pointer", "int"]);
+        MoviePlayerPopup_show = new NativeFunction(((Libg).Libg).offset(13196788, 0), "void", ["pointer"]);
+        <class_fields_init> = undefined;
+        MoviePlayerPopup;
+        class MoviePlayerPopup extends <class_fields_init> = (GenericPopup).GenericPopup {
+            constructor () {
+    var popupInstance, this.active_func, new.target;
+        this.active_func = /*special:2*/;
+        new.target = /*special:3*/;
+        popupInstance = ((Libc).Libc).calloc((MoviePlayerPopup).allocationSize, 1);
+        MoviePlayerPopup_ctor(popupInstance, 0);
+        this = super(popupInstance);
+        if (<class_fields_init>) {
+        } /* if 0x43cdf */
+        return this;
+}
+            patch () {
+        return;
+}
+            show () {
+    var popup;
+        popup = new MoviePlayerPopup();
+        return;
+}
+        }
+        MoviePlayerPopup = MoviePlayerPopup = MoviePlayerPopup;
+        exports.MoviePlayerPopup = MoviePlayerPopup;
+        MoviePlayerPopup.allocationSize = 424;
         return;
 };
 
