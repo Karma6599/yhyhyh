@@ -1,19 +1,9 @@
-// ============================================================= //
-// FEATURE: Use low resolution graphics
-// Config key: UseLowResGraphics (default false)
-// TID prefix: LowResGraphics
-// Icon: LowResGraphicsCallback (menu/icons.js, module 2120)
-// Wiring: GameMain.applyGraphicsConfig (core/bootstrap.js, module 8775)
-// + GfxDebugKnobs (menu/debug-tools.js, module 2658); the debug menu
-// also cycles quality via GFX_QUALITY_CYCLE
-// ============================================================= //
-
 Config.configStatic.UseLowResGraphics = false;
+Config.configStatic.GfxQualityLevel = 3;
+Config.configStatic.MemQualityLevel = 3;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   LowResGraphics_name        = "Use low resolution graphics"
-//   LowResGraphics_descEnabled = "When enabled, game will use low resolution textures when possible, which can help increase FPS."
+LocalisationOverrides.overrides.en.LowResGraphics_name = "Use low resolution graphics";
+LocalisationOverrides.overrides.en.LowResGraphics_descEnabled = "When enabled, game will use low resolution textures when possible, which can help increase FPS.";
 
 function LowResGraphicsCallback() {
     var mapEditorRemoveBtn = StringTable.StringTable.getMovieClip("sc/ui.sc", "map_editor_remove_button");
@@ -22,7 +12,6 @@ function LowResGraphicsCallback() {
     return btn.getChildById(5);
 }
 
-// GameMain (module 8775, core/bootstrap.js):
 var useOnlyLowresAssetsAddr = Libg.Libg.offset(19854356, 0);
 var gfxCapabilityOffset = LogicMemory.LogicMemory.offset(136);
 var memoryCapabilityOffset = LogicMemory.LogicMemory.offset(140);
@@ -45,17 +34,41 @@ function applyGraphicsConfig() {
     instance.add(memoryCapabilityOffset).writeS32(Config.Config.config.MemQualityLevel);
 }
 
-// GfxDebugKnobs (module 2658, menu/debug-tools.js) — the debug-side toggle:
-//
-//     isLowResAssets() {
-//         return Config.Config.config.UseLowResGraphics;
-//     }
-//     toggleLowResAssets() {
-//         Config.Config.config.UseLowResGraphics = !Config.Config.config.UseLowResGraphics;
-//         this.persistAndApply();
-//         ...
-//     }
-//
-// The quality cycle knob (GFX_QUALITY_CYCLE debug button) walks
-// GfxQualityLevel through QUALITY_LABELS = ["Low", "Mid", "High", "Highest"]
-// on the same applyGraphicsConfig path.
+var QUALITY_LABELS = ["Low", "Mid", "High", "Highest"];
+
+class GfxDebugKnobs {
+    isLowResAssets() {
+        return Config.Config.config.UseLowResGraphics;
+    }
+
+    toggleLowResAssets() {
+        Config.Config.config.UseLowResGraphics = !Config.Config.config.UseLowResGraphics;
+        this.persistAndApply();
+    }
+
+    getGfxQualityLevel() {
+        return Config.Config.config.GfxQualityLevel;
+    }
+
+    cycleGfxCapability() {
+        Config.Config.config.GfxQualityLevel = this.nextQualityLevel(Config.Config.config.GfxQualityLevel);
+        this.persistAndApply();
+    }
+
+    getMemQualityLevel() {
+        return Config.Config.config.MemQualityLevel;
+    }
+
+    cycleMemCapability() {
+        Config.Config.config.MemQualityLevel = this.nextQualityLevel(Config.Config.config.MemQualityLevel);
+        this.persistAndApply();
+    }
+
+    nextQualityLevel(current) {
+        return (current + 1) % QUALITY_LABELS.length;
+    }
+
+    persistAndApply() {
+        FileManager.FileManager.updateConfigFile();
+    }
+}

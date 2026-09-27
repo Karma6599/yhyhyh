@@ -1,20 +1,7 @@
-// ============================================================= //
-// FEATURE: Use battle proxy
-// Config key: UseBattleProxy (default false)
-// TID prefix: UseBattleProxy
-// Icon: UseBattleProxyCallback (menu/icons.js, module 2120)
-// Wiring: UdpConnectionInfoMessage (messages/game-protocol.js, module 8777)
-// asks the BSD+ server for a proxy endpoint via GetBSDBattleProxyMessage
-// (messages/bsd-api-messages.js, module 6072) and rewrites the battle
-// connection before it is used
-// ============================================================= //
-
 Config.configStatic.UseBattleProxy = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   UseBattleProxy_name        = "Use battle proxy"
-//   UseBattleProxy_descEnabled = "When enables, you'll be connected to proxy when entering a battle. This only make sense for russian players without VPN."
+LocalisationOverrides.overrides.en.UseBattleProxy_name = "Use battle proxy";
+LocalisationOverrides.overrides.en.UseBattleProxy_descEnabled = "When enables, you'll be connected to proxy when entering a battle. This only make sense for russian players without VPN.";
 
 function UseBattleProxyCallback() {
     var iconSprite = new Sprite.Sprite(1);
@@ -34,8 +21,6 @@ function UseBattleProxyCallback() {
     return iconSprite;
 }
 
-// GetBSDBattleProxyMessage (module 6072, messages/bsd-api-messages.js) —
-// the BSD+ API request for a proxy endpoint:
 class GetBSDBattleProxyMessage extends BSDMessage.BSDMessage {
     constructor(ip, port) {
         var route = BSDApi.BSDApi.v1ApiRoute + BSDApi.BSDApi.GET_PROXY;
@@ -50,8 +35,6 @@ class GetBSDBattleProxyMessage extends BSDMessage.BSDMessage {
     }
 }
 
-// UdpConnectionInfoMessage (module 8777, messages/game-protocol.js) —
-// the battle connection message whose endpoint gets swapped:
 var UdpConnectionInfoMessage_decode = Libg.Libg.offset(16264832, 0);
 var portOffset = LogicMemory.LogicMemory.offset(144);
 var ipOffset = LogicMemory.LogicMemory.offset(152);
@@ -105,7 +88,3 @@ class UdpConnectionInfoMessage {
 }
 UdpConnectionInfoMessage.ip = "";
 UdpConnectionInfoMessage.port = -1;
-
-// The decode-side gate (UdpConnectionInfoMessage.patch) that decides whether
-// the proxy is requested based on Config.config.UseBattleProxy is lost in the
-// repo's own decompile (patch body truncated) — not invented.

@@ -1,11 +1,3 @@
-// ============================================================= //
-// FEATURE: Always show chat button
-// Config key: EnforceBattleChatButton (default true)
-// TID prefix: EnforceBattleChatButton
-// Icon: EnforceBattleChatButtonCallback (menu/icons.js, module 2120)
-// Wiring: BattleScreen.patch (ui/screens.js, module 7835)
-// ============================================================= //
-
 Config.configStatic.EnforceBattleChatButton = true;
 
 LocalisationOverrides.overrides.en.EnforceBattleChatButton_name = "Always show chat button";
@@ -20,7 +12,6 @@ function EnforceBattleChatButtonCallback() {
     return cooldownChild;
 }
 
-// BattleScreen native (module 7835, ui/screens.js):
 var BattleScreen_shouldShowChatButton = Libg.Libg.offset(11791332, 0);
 
 function patchEnforceBattleChatButton() {

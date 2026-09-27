@@ -1,13 +1,3 @@
-// ============================================================= //
-// FEATURE: Legacy backgrounds
-// Config key: LegacyBackgrounds (default false)
-// TID prefix: LegacyBackgrounds
-// Icon: none — dev-builds-only item (questionmark fallback in the
-// settings popup; disabled: !ModProperties.isDev())
-// Wiring: HomeScreen theme refresh hook (ui/screens.js, module 8569)
-// + ThemePreviewPopup (features/mod-menu/change-theme.js, module 9244)
-// ============================================================= //
-
 Config.configStatic.LegacyBackgrounds = false;
 
 LocalisationOverrides.overrides.en.LegacyBackgrounds_name = "Legacy backgrounds";
@@ -15,12 +5,9 @@ LocalisationOverrides.overrides.en.LegacyBackgrounds_descEnabled = "Replaces new
 LocalisationOverrides.overrides.ru.LegacyBackgrounds_name = "Старый стиль фонов";
 LocalisationOverrides.overrides.ru.LegacyBackgrounds_descEnabled = "Возвращает старый стиль фоновых тем в меню.";
 
-// HomeScreen native (module 8569, ui/screens.js):
 var HomeScreen_refreshTheme = new NativeFunction(Libg.Libg.offset(11892688, 0), "void", ["pointer"]);
 
 function patchLegacyBackgrounds() {
-    // Installed after HomeScreen.refreshTheme: strips the detailed layers
-    // off the freshly laid-out menu theme clip.
     Interceptor.attach(HomeScreen_refreshTheme, { onLeave() {
         var clip = HomeScreen.HomeScreen.getThemeMovieClip();
         if (Config.Config.config.LegacyBackgrounds) {
@@ -29,18 +16,6 @@ function patchLegacyBackgrounds() {
     } });
 }
 
-// Also applied by ThemePreviewPopup's constructor (module 9244,
-// features/mod-menu/change-theme.js) for "bgr_"-prefixed preview clips:
-//
-//     if (clip.exportName != null && clip.exportName.startsWith("bgr_")) {
-//         clip = StrangerthingsFixer.fix(clip);
-//         if (Config.Config.config.LegacyBackgrounds) {
-//             LegacyBackgroundManager.apply(clip, true);
-//         }
-//     }
-
-// LegacyBackgroundManager (module 9244, features/mod-menu/change-theme.js) —
-// hides the "new-style" decoration layers of each known theme export:
 class LegacyBackgroundManager {
     static disableRange(from, to) {
         return function (i) {

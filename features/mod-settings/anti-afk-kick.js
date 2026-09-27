@@ -1,12 +1,3 @@
-// ============================================================= //
-// FEATURE: Anti AFK kick
-// Config key: AntiAfkKick (default false)
-// TID prefix: AntiAfkKick
-// Icon: AntiAfkKickCallback (menu/icons.js, module 2120)
-// Implementation: config key only — the anti-idle behaviour itself
-// is handled natively (no JS consumer in this build's source).
-// ============================================================= //
-
 Config.configStatic.AntiAfkKick = false;
 
 LocalisationOverrides.overrides.en.AntiAfkKick_name = "Anti AFK kick";

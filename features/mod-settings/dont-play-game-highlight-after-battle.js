@@ -1,18 +1,7 @@
-// ============================================================= //
-// FEATURE: Don't play «Game Highlight» after battle
-// Config key: DoNotShowBattleHighlight (default false)
-// TID prefix: DoNotShowBattleHighlight
-// Icon: DoNotShowBattleHighlightCallback (menu/icons.js, module 2120)
-// Implementation: config key only — highlight suppression is
-// handled natively; no JS consumer in this build's source.
-// ============================================================= //
-
 Config.configStatic.DoNotShowBattleHighlight = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   DoNotShowBattleHighlight_name        = "Don't play «Game Highlight» after battle"
-//   DoNotShowBattleHighlight_descEnabled = "When enabled, the «Game Highlight» will never be played at the end of battle."
+LocalisationOverrides.overrides.en.DoNotShowBattleHighlight_name = "Don't play «Game Highlight» after battle";
+LocalisationOverrides.overrides.en.DoNotShowBattleHighlight_descEnabled = "When enabled, the «Game Highlight» will never be played at the end of battle.";
 
 function DoNotShowBattleHighlightCallback() {
     var iconSprite = new Sprite.Sprite(1);

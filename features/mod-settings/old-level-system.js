@@ -1,36 +1,48 @@
-// ============================================================= //
-// FEATURE: Old level system
-// Config key: CustomMods payload "OldRankMod" (CustomModNames.oldRankMod)
-// TID prefix: OldRankMod
-// Icon: none — the item ships disabled (disabled: true) in the settings
-// popup; behaviour: EBehaviour.CUSTOM_MOD, shouldReloadGame: true
-// Wiring: LogicDataTableResource.patch (game/logic-core.js, module 1724)
-// applies the milestones.csv patch from the CustomMods payload
-// ============================================================= //
+LocalisationOverrides.overrides.en.OldRankSystem_name = "Old level system";
+LocalisationOverrides.overrides.en.OldRankSystem_descEnabled = "When enabled, levels will return to previous system (level 35 = max).";
 
-// CustomModNames (module 2214, menu/mod-configuration.js):
-//   CustomModNames.oldRankMod = "OldRankMod";
-//
-// The toggle state is membership in the CustomMods array:
-//   key: Config.config.CustomMods.includes(CustomModNames.oldRankMod)
-//
-// Toggling (ModConfigurationItem.buttonPressed, CUSTOM_MOD behaviour)
-// adds/removes the payload string from Config.config.CustomMods and flags
-// a game reload.
+class CustomModNames {}
+CustomModNames.oldRankMod = "OldRankMod";
 
-// LogicDataTableResource.patch (module 1724, game/logic-core.js) — the CSV
-// patch application. The base patch set always ships; the OldRankMod entry
-// maps csv_logic/milestones.csv to its modded copy under
-// bsd/mods/BSDCsvPatches/ (levels capped at 35 — the old rank system):
+var LogicDataTableResource_getFileName = Libg.Libg.offset(14776164, 0);
+var isIOS = Process.platform === "darwin";
+var allowedReturnAddrs = null;
+
 function patchLogicDataTableResource() {
     var bsdCsvPatchPath = "bsd/mods/BSDCsvPatches/";
     var csvFiles = new Set(["csv_logic/themes.csv", "csv_client/effects.csv", "csv_client/music.csv"]);
-    var mods = [{ file: "csv_logic/milestones.csv", mod: CustomModNames.CustomModNames.oldRankMod }];
-    // The getFileName redirect that swaps in the patched CSVs is lost in the
-    // repo's own decompile (patch body truncated) — not invented.
+    var mods = [{ file: "csv_logic/milestones.csv", mod: CustomModNames.oldRankMod }];
 }
 
-// Display side: StringTable.replacedStrings.heroMaxTier = StringObject.create("35")
-// (core/localisation.js#9250) hardcodes the old max-tier caption, and
-// StringTable.rankNames carries the per-language "RANK" label used by the
-// old level display.
+function getReplacedStrings() {
+    return {
+        heroMaxTier: StringObject.StringObject.create("35"),
+        emptyString: StringObject.StringObject.create("")
+    };
+}
+
+function getRankNames() {
+    return {
+        ar: StringObject.StringObject.create("الترتيب"),
+        cn: StringObject.StringObject.create("荣誉"),
+        cnt: StringObject.StringObject.create("RANK"),
+        de: StringObject.StringObject.create("RANG"),
+        en: StringObject.StringObject.create("RANK"),
+        es: StringObject.StringObject.create("RANGO"),
+        fi: StringObject.StringObject.create("ARVO"),
+        fr: StringObject.StringObject.create("RANG"),
+        he: StringObject.StringObject.create("דירוג"),
+        id: StringObject.StringObject.create("KELAS"),
+        it: StringObject.StringObject.create("GRADO"),
+        jp: StringObject.StringObject.create("ランク"),
+        kr: StringObject.StringObject.create("RANK"),
+        ms: StringObject.StringObject.create("PANGKAT"),
+        nl: StringObject.StringObject.create("RANG"),
+        pl: StringObject.StringObject.create("RANGA"),
+        pt: StringObject.StringObject.create("CLASSE"),
+        ru: StringObject.StringObject.create("РАНГ"),
+        th: StringObject.StringObject.create("อันดับ"),
+        tr: StringObject.StringObject.create("RÜTBE"),
+        vi: StringObject.StringObject.create("HẠNG")
+    };
+}

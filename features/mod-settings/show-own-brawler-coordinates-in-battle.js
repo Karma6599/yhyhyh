@@ -1,18 +1,7 @@
-// ============================================================= //
-// FEATURE: Show own brawler coordinates in battle
-// Config key: ShowOwnPlayerCoordinates (default false)
-// TID prefix: ShowOwnPlayerCoordinates
-// Icon: ShowOwnPlayerCoordinatesCallback (menu/icons.js, module 2120)
-// Wiring: BattleScreen enter/exit hooks (ui/screens.js, module 7835)
-// mount the BattleCoordinates overlay (module 2542, game/objects.js)
-// ============================================================= //
-
 Config.configStatic.ShowOwnPlayerCoordinates = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   ShowOwnPlayerCoordinates_name        = "Show own brawler coordinates in battle"
-//   ShowOwnPlayerCoordinates_descEnabled = "When enabled, own character coordinates will be displayed in battle."
+LocalisationOverrides.overrides.en.ShowOwnPlayerCoordinates_name = "Show own brawler coordinates in battle";
+LocalisationOverrides.overrides.en.ShowOwnPlayerCoordinates_descEnabled = "When enabled, own character coordinates will be displayed in battle.";
 
 function ShowOwnPlayerCoordinatesCallback() {
     var iconSprite = new Sprite.Sprite(1);
@@ -31,7 +20,6 @@ function ShowOwnPlayerCoordinatesCallback() {
     return iconSprite;
 }
 
-// BattleCoordinates (module 2542, game/objects.js) — the overlay widget:
 class BattleCoordinates {
     constructor() {
         var coordinatesMovieClip = StringTable.StringTable.getMovieClip("sc/ui.sc", "popover_text_left");
@@ -49,25 +37,32 @@ class BattleCoordinates {
     }
 }
 
-// BattleScreen natives (module 7835, ui/screens.js):
 var BattleScreen_enter_tail = Libg.Libg.offset(11458712, 0);
 var BattleScreen_exit = new NativeFunction(Libg.Libg.offset(11703448, 0), "void", ["pointer"]);
 
-// Mounted at battle start — inside the enter_tail hook, after the HUD is
-// ready (the sibling wiring there belongs to the other battle-UI features):
-//
-//     if (Config.Config.config.ShowOwnPlayerCoordinates) {
-//         CombatHUD.CombatHUD.coordinates = new BattleCoordinates();
-//         combatHUD.addChild(CombatHUD.CombatHUD.coordinates.textField);
-//     }
-//
-// Unmounted at battle exit:
-//
-//     if (CombatHUD.CombatHUD.coordinates) {
-//         combatHUD.removeChild(CombatHUD.CombatHUD.coordinates.textField);
-//         CombatHUD.CombatHUD.coordinates = null;
-//     }
-//
-// NOTE: the per-frame X/Y text update is not present in this build's JS —
-// the BattleScreen_update onLeave hook body is empty in the decompile, so
-// the live coordinate feed (native side) is documented, not invented.
+function patchShowOwnPlayerCoordinates() {
+    Interceptor.attach(BattleScreen_enter_tail, {
+        onEnter() {
+            var combatHUD = BattleScreen.BattleScreen.getCombatHUD();
+            if (combatHUD.isNull()) {
+                return;
+            }
+            if (Config.Config.config.ShowOwnPlayerCoordinates) {
+                CombatHUD.CombatHUD.coordinates = new BattleCoordinates();
+                combatHUD.addChild(CombatHUD.CombatHUD.coordinates.textField);
+            }
+        }
+    });
+    Interceptor.replace(BattleScreen_exit, new NativeCallback(function (self) {
+        BattleScreen.BattleScreen.dispatchListeners(BattleScreen.BattleScreen.exitListeners);
+        var combatHUD = BattleScreen.BattleScreen.getCombatHUD();
+        if (!combatHUD.isNull()) {
+            if (CombatHUD.CombatHUD.coordinates) {
+                combatHUD.removeChild(CombatHUD.CombatHUD.coordinates.textField);
+                CombatHUD.CombatHUD.coordinates = null;
+            }
+        }
+        BattleScreen_exit(self);
+        Breadcrumbs.Breadcrumbs.push("BattleScreen::exit");
+    }, "void", ["pointer"]));
+}

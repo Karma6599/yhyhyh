@@ -1,19 +1,7 @@
-// ============================================================= //
-// FEATURE: Hide text in lobby
-// Config key: HideHomeScreenText (default false)
-// TID prefix: HideLobbyInfo
-// Icon: HideHomeScreenTextCallback (menu/icons.js, module 2120)
-// Wiring: LobbyInfo (core/config.js, module 4009 file) is created by
-// the HomePage constructor hook (ui/screens.js, module 2757) and
-// re-evaluated by HomeScreen.update (module 8569).
-// ============================================================= //
-
 Config.configStatic.HideHomeScreenText = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   HideLobbyInfo_name        = "Hide text in lobby"
-//   HideLobbyInfo_descEnabled = "When enabled, lobby information (mod authors and ping) will NOT be displayed."
+LocalisationOverrides.overrides.en.HideLobbyInfo_name = "Hide text in lobby";
+LocalisationOverrides.overrides.en.HideLobbyInfo_descEnabled = "When enabled, lobby information (mod authors and ping) will NOT be displayed.";
 
 function HideHomeScreenTextCallback() {
     var iconSprite = new Sprite.Sprite(1);
@@ -32,15 +20,13 @@ function HideHomeScreenTextCallback() {
     return iconSprite;
 }
 
-// LobbyInfo (core/config.js) — the lobby caption widget. The HideHomeScreenText
-// check lives in update(); visibility and text are both driven by the toggle:
 class LobbyInfo {
     constructor(page) {
         this.x = 120;
         this.y = 90;
         this.fontSize = 14;
         this.useFontOutline = true;
-        this.color = 0xffffffff;
+        this.color = 4294967295.0;
         var popoverTextLeftClip = StringTable.StringTable.getMovieClip("sc/ui.sc", "popover_text_left");
         var textField = popoverTextLeftClip.getTextFieldByName("text");
         if (BSDPlusManager.BSDPlusManager.isBSDPlusEnabled) {
@@ -86,21 +72,23 @@ class LobbyInfo {
 }
 LobbyInfo.text = "";
 
-// Created by the HomePage constructor hook (ui/screens.js#2757):
-//
-//     Interceptor.attach(HomePage_constructor, {
-//         onLeave() {
-//             ...
-//             HomeScreen.HomeScreen.lobbyInfo = new LobbyInfo(page);
-//             HomeScreen.HomeScreen.lobbyInfo.update();
-//             ...
-//         }
-//     });
-//
-// Refreshed every frame by HomeScreen.update (module 8569):
-//
-//     update() {
-//         if (this.lobbyInfo) {
-//             this.lobbyInfo.update();
-//         }
-//     }
+var HomePage_constructor = new NativeFunction(Libg.Libg.offset(13033040, 0), "void", ["pointer"]);
+
+function patchHideTextInLobby() {
+    Interceptor.attach(HomePage_constructor, {
+        onEnter(args) {
+            this.homePage = args[0];
+        },
+        onLeave() {
+            var page = new HomePage.HomePage(this.homePage);
+            HomeScreen.HomeScreen.lobbyInfo = new LobbyInfo(page);
+            HomeScreen.HomeScreen.lobbyInfo.update();
+        }
+    });
+}
+
+function updateHomeScreen() {
+    if (HomeScreen.HomeScreen.lobbyInfo) {
+        HomeScreen.HomeScreen.lobbyInfo.update();
+    }
+}

@@ -1,11 +1,3 @@
-// ============================================================= //
-// FEATURE: Default environments
-// Config key: DefaultEnvironments (default false)
-// TID prefix: DefaultEnvironments
-// Icon: DefaultEnvironmentsCallback (menu/icons.js, module 2120)
-// Wiring: LogicLocationData (game/data-classes.js, module 4325) —
-// rewrites every location's theme back to the original environment
-// ============================================================= //
 
 Config.configStatic.DefaultEnvironments = false;
 
@@ -19,10 +11,6 @@ function DefaultEnvironmentsCallback() {
     iconGearReload.gotoAndStopFrameIndex(1);
     return iconGearReload;
 }
-
-// LogicLocationData (module 4325, game/data-classes.js) — the default-theme
-// engine. Shared class helpers (getLocationThemeByName, getBooleanValueAt,
-// the table API) are referenced, not redefined.
 
 function applyDefaultEnvironments() {
     if (!Config.Config.config.DefaultEnvironments) {
@@ -142,12 +130,8 @@ function resolveSoftOverrideForVariation(variationId, cache) {
     return resolved;
 }
 
-// Soft overrides — per game-mode-variation default theme names:
 var DEFAULT_THEME_BY_VARIATION_SOFT = { 0: "Mine", 2: "Default", 3: "Default", 5: "Grassfield", 6: "DefaultShowdown", 7: "BBArena", 8: "Mortuary", 9: "DefaultShowdown", 10: "MadEvilManor", 17: "Arcade", 20: "Rooftop", 22: "BBArena", 23: "BBArena", 24: "Default", 25: "Default", 26: "ScrapyardShowdown", 31: "SBGrassfield", 32: "SBGrassfield", 33: "SBGrassfield", 35: "SBGrassfield", 37: "Hub", 38: "DefaultShowdown", 45: "AirHockey", 46: "Mine", 47: "ScrapyardShowdown", 48: "IslandShowdown", 49: "Grassfield", 50: "Rooftop", 52: "BBArena", 53: "AirHockey", 55: "BBArena", 56: "Mortuary", 57: "AirHockey", 58: "Pyramidquest", 60: "KatanaKingdom", 61: "MadEvilManor", 63: "Hub", 64: "BandStand", 65: "Mine", 66: "BBArena", 68: "Hub", 70: "Default", 72: "DefaultShowdown", 75: "DefaultShowdown", 76: "Grassfield", 77: "Pyramidquest", 78: "DefaultShowdown", 79: "AirHockey" };
 
-// Hard overrides — exact (variation, mapWidth, mapHeight) rules.
-// Note: entries [0]..[31] of this table were lost in the repo's own decompile;
-// the surviving entries are reproduced verbatim:
 var DEFAULT_THEME_RULES = [
     { variation: 48, width: 21, height: 33, theme: "IslandShowdown" },
     { variation: 48, width: 60, height: 60, theme: "DefaultShowdown" },

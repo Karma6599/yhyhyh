@@ -1,20 +1,7 @@
-// ============================================================= //
-// FEATURE: Slow mode
-// Config key: SlowMode (default false)
-// TID prefix: SlowMode
-// Icon: SlowModeCallback (menu/icons.js, module 2120)
-// Wiring: GameMain (core/bootstrap.js, module 8775) applies the
-// time-scale at data init (LogicDataTables.initializeData,
-// game/logic-core.js, module 6139); the debug menu exposes it through
-// DebugCallbacks.toggleSlowMode / SLOW_MOTION_4X.
-// ============================================================= //
-
 Config.configStatic.SlowMode = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   SlowMode_name        = "Slow mode"
-//   SlowMode_descEnabled = "When enabled, game will slow down (slow-mo effect)."
+LocalisationOverrides.overrides.en.SlowMode_name = "Slow mode";
+LocalisationOverrides.overrides.en.SlowMode_descEnabled = "When enabled, game will slow down (slow-mo effect).";
 
 function SlowModeCallback() {
     var iconSprite = new Sprite.Sprite(1);
@@ -36,8 +23,8 @@ function SlowModeCallback() {
     return iconSprite;
 }
 
-// GameMain (module 8775, core/bootstrap.js) — the time-scale switch:
 var slowModeAddr = Libg.Libg.offset(19914776, 0);
+var GameMain_setSlowMode = Libg.Libg.offset(7725648, 0);
 
 function applySlowMode(state) {
     if (state) {
@@ -57,21 +44,26 @@ function toggleSlowMode() {
     return Config.Config.config.SlowMode;
 }
 
-// Applied at data initialization (module 6139, game/logic-core.js):
-//
-//     var initializers = [
-//         ["StringTable", function () { return StringTable.StringTable.onLanguageSet(); }],
-//         ["ThemeSelector", function () { return ThemeSelector.ThemeSelectorManager.init(); }],
-//         ["LocationData", function () { return LogicLocationData.LogicLocationData.applyConfiguredEnvironments(); }],
-//         ["SlowMode", function () { return GameMain.GameMain.applySlowMode(Config.Config.config.SlowMode); }]
-//     ];
-//
-// Debug menu (menu/debug-tools.js, SLOW_MOTION_4X button):
-//
-//     toggleSlowMode() {
-//         var enabled = GameMain.GameMain.toggleSlowMode();
-//         ...
-//     }
-//     isSlowModeEnabled() {
-//         return GameMain.GameMain.isSlowMode();
-//     }
+function initializeData() {
+    var initializers = [
+        ["StringTable", function () {
+            return StringTable.StringTable.onLanguageSet();
+        }],
+        ["ThemeSelector", function () {
+            return ThemeSelector.ThemeSelectorManager.init();
+        }],
+        ["LocationData", function () {
+            return LogicLocationData.LogicLocationData.applyConfiguredEnvironments();
+        }],
+        ["SlowMode", function () {
+            return applySlowMode(Config.Config.config.SlowMode);
+        }]
+    ];
+    for (var [name, initialize] of initializers) {
+        try {
+            initialize();
+        } catch (error) {
+            Logcat.Logcat.logError("Data initialization failed (".concat(name, "): ", error));
+        }
+    }
+}

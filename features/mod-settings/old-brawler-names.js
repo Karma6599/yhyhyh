@@ -1,13 +1,3 @@
-// ============================================================= //
-// FEATURE: Old brawler names
-// Config keys: LegacyNames (default false), OldGlowbertName (default false)
-// TID prefix: LegacyNames
-// Icon: LegacyNamesCallback (menu/icons.js, module 2120)
-// Implementation: the old-name table ships in the JS localisation
-// overrides (module 6528) as standalone keys; the swap itself has no
-// JS consumer in this build (applied through the localisation layer).
-// ============================================================= //
-
 Config.configStatic.LegacyNames = false;
 Config.configStatic.OldGlowbertName = false;
 
@@ -28,10 +18,3 @@ function LegacyNamesCallback() {
     child.gotoAndStopFrameIndex(160);
     return clip;
 }
-
-// The three override values above are the complete old-name table from
-// module 6528 (core/localisation.js). Nothing in this build's JS reads
-// Config.config.LegacyNames to install the swap — the name replacement is
-// resolved through the localisation/string-table layer (the values are
-// standalone keys, not TID redirects), so no hook is reproduced here.
-// OldGlowbertName is a related leftover key from the same family.

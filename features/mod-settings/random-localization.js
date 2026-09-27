@@ -1,13 +1,3 @@
-// ============================================================= //
-// FEATURE: Random localization
-// Config key: RandomLocalization (default false)
-// TID prefix: RandomLocalization
-// Icon: RandomLocalizationCallback (menu/icons.js, module 2120)
-// Implementation: config key only in the JS layer — the string
-// shuffling is applied through the localisation overrides table
-// (module 6528); no per-string JS consumer in this build's source.
-// ============================================================= //
-
 Config.configStatic.RandomLocalization = false;
 
 LocalisationOverrides.overrides.en.RandomLocalization_name = "Random localization";
@@ -35,8 +25,3 @@ function RandomLocalizationCallback() {
     iconSprite.scale = 1.95;
     return iconSprite;
 }
-
-// The shuffle itself happens while the string table is being laid out —
-// no dedicated JS hook exists for it in this build (the overrides table in
-// module 6528, core/localisation.js, is the only localisation-side
-// mechanism and does not branch on this key).

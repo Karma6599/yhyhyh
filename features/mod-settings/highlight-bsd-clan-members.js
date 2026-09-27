@@ -1,13 +1,3 @@
-// ============================================================= //
-// FEATURE: Highlight BSD-clan members
-// Config key: ShowAllianceMembersInBattle (default false)
-// TID prefix: ShowAllianceMembersInBattle
-// Icon: ShowAllianceMembersInBattleCallback (menu/icons.js, module 2120)
-// Wiring: StartLoadingMessage.applyPendingTitles
-// (messages/game-protocol.js, module 3000) — injects the clan tag
-// into battle names from the BSD+ users response
-// ============================================================= //
-
 Config.configStatic.ShowAllianceMembersInBattle = false;
 
 LocalisationOverrides.overrides.en.ShowAllianceMembersInBattle_name = "Highlight BSD-clan members";
@@ -23,11 +13,7 @@ function ShowAllianceMembersInBattleCallback() {
     return child;
 }
 
-// StartLoadingMessage.applyPendingTitles (module 3000, messages/game-protocol.js)
-// runs once the BSD+ users-by-tag response is ready. Both highlight tags
-// (🛡️ clan / ❌ blacklist) are injected by the same loop; the branch owned by
-// this feature is the clan check:
-function applyPendingTitles() {
+function applyClanMemberTitles() {
     try {
         var client = BattleMode.BattleMode.client;
         if (!client) {
@@ -64,11 +50,6 @@ function applyPendingTitles() {
                         if (typeof user.name === "string" && user.name.length > 0) {
                             cachedName = user.name;
                         }
-                        var playerName = "";
-                        if (Config.Config.config.PlayerNameOverride && player.playerId.equals(PlayerInfo.PlayerInfo.accountId)) {
-                            playerName = Config.Config.config.PlayerNameOverride;
-                        }
-                        // --- tag injection (this feature: 🛡️ clan members) ---
                         var relationshipEmojis = "";
                         if (BSDPlusManager.BSDPlusManager.isBSDPlusEnabled) {
                             if (Config.Config.config.ShowAllianceMembersInBattle) {
@@ -77,14 +58,12 @@ function applyPendingTitles() {
                                 }
                             }
                         }
-                        // (the ❌ blacklist branch lives in highlight-blacklisted-players.js)
-                        var decoratedName = [playerName, cachedName].filter(Boolean).join(" ");
+                        var decoratedName = cachedName;
                         if (relationshipEmojis) {
                             decoratedName = relationshipEmojis + " " + decoratedName;
                         }
-                        var finalName = decoratedName;
-                        if (finalName !== nativeName) {
-                            introDetails.setPlayerName(finalName);
+                        if (decoratedName !== nativeName) {
+                            introDetails.setPlayerName(decoratedName);
                         }
                     }
                 }
@@ -92,9 +71,15 @@ function applyPendingTitles() {
             StartLoadingMessage.StartLoadingMessage.lastBSDResponse = null;
             StartLoadingMessage.StartLoadingMessage.bsdResponseReady = false;
         }
-        // CustomMarks fallback pass (titles from local marks) follows in the
-        // original method — owned by the custom-marks feature.
     } catch (e) {
         Logcat.Logcat.logError("Error applying titles: " + e.stack);
     }
+}
+
+function patchHighlightBsdClanMembers() {
+    BattleScreen.BattleScreen.addEnterListener(function () {
+        if (StartLoadingMessage.StartLoadingMessage.bsdResponseReady) {
+            applyClanMemberTitles();
+        }
+    });
 }

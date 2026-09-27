@@ -1,13 +1,3 @@
-// ============================================================= //
-// FEATURE: Old friends list
-// Config key: EnforceOldFriendsList (default false)
-// TID prefix: EnforceOldFriendsList
-// Icon: EnforceOldFriendsListCallback (menu/icons.js, module 2120)
-// Implementation: config key only — the classic-vs-new friends list
-// layout switch is handled by the game UI itself; no JS consumer in
-// this build's source.
-// ============================================================= //
-
 Config.configStatic.EnforceOldFriendsList = false;
 
 LocalisationOverrides.overrides.en.EnforceOldFriendsList_name = "Old friends list";

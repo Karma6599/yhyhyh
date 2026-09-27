@@ -1,3 +1,25 @@
+Config.configStatic.AutoPlayAgain = false;
+Config.configStatic.ShowAutoPlayAgainRadioButton = false;
+
+LocalisationOverrides.overrides.en.ShowAutoPlayAgainRadioButton_name = "Auto play again";
+LocalisationOverrides.overrides.en.ShowAutoPlayAgainRadioButton_descEnabled = "When enabled, auto play again switch will be available in battle.";
+
+function ShowAutoPlayAgainRadioButtonCallback() {
+    var showFastPlayAgainButtonClip = ShowFastPlayAgainButtonCallback();
+    var parentClip = StringTable.StringTable.getMovieClip("sc/ui.sc", "edit_controls_ui_screen_hud_top");
+    var clip = parentClip.getChildByName("locked_movement_controls_button");
+    if (clip) {
+        clip.x = showFastPlayAgainButtonClip.width / 3;
+        clip.y = showFastPlayAgainButtonClip.height / 3.5;
+        var stateClip = clip.getChildByName("state");
+        if (stateClip) {
+            stateClip.gotoAndStopFrameIndex(0);
+        }
+        showFastPlayAgainButtonClip.addChild(clip);
+    }
+    return showFastPlayAgainButtonClip;
+}
+
 class BattleAutoPlayAgainRadioButton extends RadioButton.RadioButton {
     constructor() {
         var parentMovieClip = StringTable.StringTable.getMovieClip("sc/ui.sc", "edit_controls_ui_screen_hud_top");
@@ -29,4 +51,22 @@ class BattleAutoPlayAgainRadioButton extends RadioButton.RadioButton {
         Config.Config.config.AutoPlayAgain = !Config.Config.config.AutoPlayAgain;
         FileManager.FileManager.updateConfigFile();
     }
+}
+
+var BattleScreen_enter_tail = Libg.Libg.offset(11458712, 0);
+
+function patchAutoPlayAgain() {
+    Interceptor.attach(BattleScreen_enter_tail, {
+        onEnter() {
+            var combatHUD = BattleScreen.BattleScreen.getCombatHUD();
+            if (combatHUD.isNull()) {
+                return;
+            }
+            if (Config.Config.config.ShowAutoPlayAgainRadioButton) {
+                var autoPlayAgainRadioButton = new BattleAutoPlayAgainRadioButton();
+                combatHUD.addChild(autoPlayAgainRadioButton);
+                combatHUD.addChild(autoPlayAgainRadioButton.textField);
+            }
+        }
+    });
 }

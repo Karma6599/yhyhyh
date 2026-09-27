@@ -1,12 +1,3 @@
-// ============================================================= //
-// FEATURE: Disable all skins
-// Config key: DisableSkins (default false)
-// TID prefix: DisableSkins
-// Icon: DisableSkinsCallback (menu/icons.js, module 2120)
-// Wiring: LogicDailyData.patch (game/data-classes.js, module 7089) —
-// every resolved skin is swapped back to the character's default
-// ============================================================= //
-
 Config.configStatic.DisableSkins = false;
 
 LocalisationOverrides.overrides.en.DisableSkins_name = "Disable all skins";
@@ -36,24 +27,20 @@ function DisableSkinsCallback() {
     return iconSprite;
 }
 
-// LogicDailyData native (module 7089, game/data-classes.js):
 var LogicDailyData_getSkin = new NativeFunction(Libg.Libg.offset(16100244, 0), "pointer", ["pointer", "pointer", "pointer"]);
 
-// Installed by LogicDailyData.patch() — the skin resolution hook.
-// The SkinSelector part of the same hook belongs to the skin-changer feature
-// (features/mod-menu/skin-changer.js); only the DisableSkins branch is ours:
-//
-//     Interceptor.attach(LogicDailyData_getSkin, {
-//         onEnter(args) {
-//             this.character = new LogicCharacterData.LogicCharacterData(args[2]);
-//         },
-//         onLeave(retval) {
-//             if (Config.Config.config.DisableSkins) {
-//                 var defaultSkin = this.character.getDefaultSkin();
-//                 if (!defaultSkin.instance.isNull()) {
-//                     retval.replace(defaultSkin.instance);
-//                 }
-//             }
-//             ...
-//         }
-//     });
+function patchDisableAllSkins() {
+    Interceptor.attach(LogicDailyData_getSkin, {
+        onEnter(args) {
+            this.character = new LogicCharacterData.LogicCharacterData(args[2]);
+        },
+        onLeave(retval) {
+            if (Config.Config.config.DisableSkins) {
+                var defaultSkin = this.character.getDefaultSkin();
+                if (!defaultSkin.instance.isNull()) {
+                    retval.replace(defaultSkin.instance);
+                }
+            }
+        }
+    });
+}

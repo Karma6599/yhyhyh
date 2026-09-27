@@ -1,13 +1,3 @@
-// ============================================================= //
-// FEATURE: Highlight blacklisted players
-// Config key: ShowBlacklistedPlayersInBattle (default false)
-// TID prefix: ShowBlacklistedPlayersInBattle
-// Icon: ShowBlacklistedPlayersInBattleCallback (menu/icons.js, module 2120)
-// Wiring: StartLoadingMessage.applyPendingTitles
-// (messages/game-protocol.js, module 3000) — injects the blacklist
-// tag into battle names from the BSD+ users response
-// ============================================================= //
-
 Config.configStatic.ShowBlacklistedPlayersInBattle = false;
 
 LocalisationOverrides.overrides.en.ShowBlacklistedPlayersInBattle_name = "Highlight blacklisted players";
@@ -19,23 +9,73 @@ function ShowBlacklistedPlayersInBattleCallback() {
     return StringTable.StringTable.getMovieClip("sc/sprays_1.sc", "spray_denied");
 }
 
-// Same loop as the BSD-clan highlight (StartLoadingMessage.applyPendingTitles,
-// module 3000) — the branch owned by this feature is the blacklist check:
-//
-//     var relationshipEmojis = "";
-//     if (BSDPlusManager.BSDPlusManager.isBSDPlusEnabled) {
-//         if (Config.Config.config.ShowBlacklistedPlayersInBattle) {
-//             if (user.is_blacklisted === true) {
-//                 relationshipEmojis = relationshipEmojis + "❌";
-//             }
-//         }
-//     }
-//     var decoratedName = [playerName, cachedName].filter(Boolean).join(" ");
-//     if (relationshipEmojis) {
-//         decoratedName = relationshipEmojis + " " + decoratedName;
-//     }
-//
-// The full decoded applyPendingTitles lives in
-// features/mod-settings/highlight-bsd-clan-members.js (same consumer method);
-// the ❌ prefix lands in front of the resolved name exactly like the 🛡️ one,
-// and both tags can stack on the same player.
+function applyBlacklistTitles() {
+    try {
+        var client = BattleMode.BattleMode.client;
+        if (!client) {
+            return;
+        }
+        var playerCount = client.getPlayerCount();
+        if (playerCount === 0) {
+            return;
+        }
+        if (StartLoadingMessage.StartLoadingMessage.bsdResponseReady && StartLoadingMessage.StartLoadingMessage.lastBSDResponse) {
+            var response = StartLoadingMessage.StartLoadingMessage.lastBSDResponse;
+            if (response.statusCode === 200 && response.json) {
+                var parsedResponseData = response.json;
+                var chaCha20 = new TSChaCha20.TSChaCha20(TSChaCha20.TSChaCha20.key, TSChaCha20.TSChaCha20.nonce);
+                var decryptedResponse = CustomTextEncoder.CustomTextEncoder.decode(chaCha20.decrypt(new Uint8Array(BSDMessageManager.BSDMessageManager.escapedStringToBytes(parsedResponseData.data))));
+                var parsedResponse = JSON.parse(decryptedResponse);
+                if (parsedResponse.status === "ok" && parsedResponse.bsd_users) {
+                    for (var i = 0; i < playerCount; i++) {
+                        var player = client.getPlayer(i);
+                        if (!player || !player.playerId) {
+                            continue;
+                        }
+                        var tag = HashTagCodeGenerator.HashTagCodeGenerator.convertLongToPlayerTag(player.playerId);
+                        var user = parsedResponse.bsd_users["#" + tag] || parsedResponse.bsd_users[tag];
+                        if (!user) {
+                            continue;
+                        }
+                        var introDetails = player.getLogicPlayerBattleIntroDetails();
+                        var nativeName = introDetails.getPlayerName();
+                        var cachedEntry = StartLoadingMessage.StartLoadingMessage.lastCachedPlayers.find(function (cachedPlayer) {
+                            return cachedPlayer.tag === tag;
+                        });
+                        var cachedName = cachedEntry ? cachedEntry.name : nativeName;
+                        if (typeof user.name === "string" && user.name.length > 0) {
+                            cachedName = user.name;
+                        }
+                        var relationshipEmojis = "";
+                        if (BSDPlusManager.BSDPlusManager.isBSDPlusEnabled) {
+                            if (Config.Config.config.ShowBlacklistedPlayersInBattle) {
+                                if (user.is_blacklisted === true) {
+                                    relationshipEmojis = relationshipEmojis + "❌";
+                                }
+                            }
+                        }
+                        var decoratedName = cachedName;
+                        if (relationshipEmojis) {
+                            decoratedName = relationshipEmojis + " " + decoratedName;
+                        }
+                        if (decoratedName !== nativeName) {
+                            introDetails.setPlayerName(decoratedName);
+                        }
+                    }
+                }
+            }
+            StartLoadingMessage.StartLoadingMessage.lastBSDResponse = null;
+            StartLoadingMessage.StartLoadingMessage.bsdResponseReady = false;
+        }
+    } catch (e) {
+        Logcat.Logcat.logError("Error applying titles: " + e.stack);
+    }
+}
+
+function patchHighlightBlacklistedPlayers() {
+    BattleScreen.BattleScreen.addEnterListener(function () {
+        if (StartLoadingMessage.StartLoadingMessage.bsdResponseReady) {
+            applyBlacklistTitles();
+        }
+    });
+}

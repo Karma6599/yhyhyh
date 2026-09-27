@@ -1,22 +1,8 @@
-// ============================================================= //
-// FEATURE: Show opponent brawlers in friendly room
-// Config key: ShowFriendlyRoomOpponents (default true)
-// TID prefix: ShowFriendlyRoomOpponents
-// Icon: ShowFriendlyRoomOpponentsCallback (menu/icons.js, module 2120)
-// Implementation: config key only (default true) — the reveal itself
-// is handled in the battle logic (server-driven friendly-room state);
-// no JS consumer in this build's source.
-// ============================================================= //
-
 Config.configStatic.ShowFriendlyRoomOpponents = true;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   ShowFriendlyRoomOpponents_name        = "Show opponent brawlers in friendly room"
-//   ShowFriendlyRoomOpponents_descEnabled = "When enabled, you will be able to see all brawlers your opponents select in friendly room."
+LocalisationOverrides.overrides.en.ShowFriendlyRoomOpponents_name = "Show opponent brawlers in friendly room";
+LocalisationOverrides.overrides.en.ShowFriendlyRoomOpponents_descEnabled = "When enabled, you will be able to see all brawlers your opponents select in friendly room.";
 
-// Module 2120 statics (menu/icons.js) — clip parts hidden / populated for
-// the preview icon:
 var ShowFriendlyRoomOpponents_DISABLE_CHILDRENS = ["hidden_hero", "icon_roomleader", "invite_player", "invite_pending", "player_dot", "swap_hilite", "slot_off_indicator", "button_slot_switch", "temp_brawler_mode"];
 var ShowFriendlyRoomOpponents_skillsChilds = ["star_power_ph", "item_ph", "gear1_ph", "gear2_ph", "overcharge_ph"];
 

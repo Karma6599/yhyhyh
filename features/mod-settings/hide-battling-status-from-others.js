@@ -1,18 +1,7 @@
-// ============================================================= //
-// FEATURE: Hide "BATTLING" status from others
-// Config key: HideBattlingStatusFromOthers (default false)
-// TID prefix: HideBattlingStatusFromOthers
-// Icon: HideBattlingStatusFromOthersCallback (menu/icons.js, module 2120)
-// Implementation: config key only — the status update suppression
-// is handled natively; no JS consumer in this build's source.
-// ============================================================= //
-
 Config.configStatic.HideBattlingStatusFromOthers = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   HideBattlingStatusFromOthers_name = "Hide "BATTLING" status from others"
-//   HideBattlingStatusFromOthers_descEnabled = "When enabled, when you enter a battle, your status won't be updated to "BATTLING", making others unable to spectate you."
+LocalisationOverrides.overrides.en.HideBattlingStatusFromOthers_name = "Hide \"BATTLING\" status from others";
+LocalisationOverrides.overrides.en.HideBattlingStatusFromOthers_descEnabled = "When enabled, when you enter a battle, your status won't be updated to \"BATTLING\", making others unable to spectate you.";
 
 function HideBattlingStatusFromOthersCallback() {
     var iconSprite = new Sprite.Sprite(1);

@@ -1,18 +1,7 @@
-// ============================================================= //
-// FEATURE: Friend list optimization
-// Config key: FriendListOptimization (default false)
-// TID prefix: FriendListOptimization
-// Icon: FriendListOptimizationCallback (menu/icons.js, module 2120)
-// Implementation: config key only — friend icon rendering is
-// handled natively; no JS consumer in this build's source.
-// ============================================================= //
-
 Config.configStatic.FriendListOptimization = false;
 
-// Strings ship in the game asset (bsd/internal/localization.json),
-// not in the JS localisation overrides:
-//   FriendListOptimization_name        = "Friend list optimization"
-//   FriendListOptimization_descEnabled = "When enabled, friend icons won't be rendered."
+LocalisationOverrides.overrides.en.FriendListOptimization_name = "Friend list optimization";
+LocalisationOverrides.overrides.en.FriendListOptimization_descEnabled = "When enabled, friend icons won't be rendered.";
 
 function FriendListOptimizationCallback() {
     var iconSprite = new Sprite.Sprite(1);
