@@ -1,10 +1,20 @@
-//============================================================================//
-// MOD FEATURE: Team chat anticensor
-// In-game name: "Team chat anticensor"  (TID: TeamChatAnticensor_name)
-// Description: "When enabled, words won't be replaced with asterisks in the team chat."
-// Menu: Mod Settings — BSD BRAWL SETTINGS popup (menu/mod-configuration.js)
-// Config key: TeamChatAnticensor  (default false)
-// Implementation: none in the JS layer — see note.
-// Note: Config key only — censoring happens server-side; not effective in this build.
-//============================================================================//
+// ============================================================= //
+// FEATURE: Team chat anticensor
+// Config key: TeamChatAnticensor (default false)
+// TID prefix: TeamChatAnticensor
+// Icon: none (questionmark fallback in the settings popup)
+// Implementation: config key only — the chat censoring happens
+// server-side, so the toggle is not effective in this build.
+// ============================================================= //
 
+Config.configStatic.TeamChatAnticensor = false;
+
+// Strings ship in the game asset (bsd/internal/localization.json),
+// not in the JS localisation overrides:
+//   TeamChatAnticensor_name        = "Team chat anticensor"
+//   TeamChatAnticensor_descEnabled = "When enabled, words won't be replaced with asterisks in the team chat."
+//
+// The word masking is applied by the server before the chat message reaches
+// clients — no JS hook can un-mask it client-side, and none ships in this
+// build. The battle-side text chat itself lives in
+// features/mod-settings/text-chat-in-battle.js.

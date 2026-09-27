@@ -1,10 +1,17 @@
-//============================================================================//
-// MOD FEATURE: Better Fang attack range
-// In-game name: "Better Fang attack range"  (TID: BetterRangeMod_name)
-// Description: "When enabled, attack range will become extended for Fang."
-// Menu: Mod Settings — BSD BRAWL SETTINGS popup (menu/mod-configuration.js)
-// Config key: BetterRange  (default false)
-// Implementation: none in the JS layer — see note.
-// Note: Config key + strings only — not wired in this build's JS.
-//============================================================================//
+// ============================================================= //
+// FEATURE: Better Fang attack range
+// Config key: BetterRange (default false)
+// TID prefix: BetterRangeMod
+// Icon: none — the toggle was planned but never wired in this build
+// ============================================================= //
 
+Config.configStatic.BetterRange = false;
+
+// Strings ship in the game asset (bsd/internal/localization.json),
+// not in the JS localisation overrides:
+//   BetterRangeMod_name        = "Better Fang attack range"
+//   BetterRangeMod_descEnabled = "When enabled, attack range will become extended for Fang."
+//
+// The config key is registered (core/config.js configStatic) and the strings
+// exist, but no consumer reads BetterRange anywhere in this build's JS —
+// the extended-range logic is not wired.

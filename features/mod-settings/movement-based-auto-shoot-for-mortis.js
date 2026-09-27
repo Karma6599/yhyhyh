@@ -1,9 +1,16 @@
-//============================================================================//
-// MOD FEATURE: Movement based auto shoot (for Mortis)
-// In-game name: "Movement based auto shoot (for Mortis)"  (TID: MovementBasedAutoshoot_name)
-// Description: "When enabled, Mortis auto attack will be based on his movement."
-// Menu: Mod Settings — BSD BRAWL SETTINGS popup (menu/mod-configuration.js)
-// Implementation: none in the JS layer — see note.
-// Note: Strings only — toggle planned but NOT implemented in this build.
-//============================================================================//
+// ============================================================= //
+// FEATURE: Movement based auto shoot (for Mortis)
+// TID prefix: MovementBasedAutoshoot
+// Icon: none
+// Implementation: strings only — the toggle was planned but never
+// wired in this build (no config key, no consumer).
+// ============================================================= //
 
+// Strings ship in the game asset (bsd/internal/localization.json),
+// not in the JS localisation overrides:
+//   MovementBasedAutoshoot_name        = "Movement based auto shoot (for Mortis)"
+//   MovementBasedAutoshoot_descEnabled = "When enabled, Mortis auto attack will be based on his movement."
+//
+// No MovementBasedAutoshoot config key is registered in core/config.js
+// configStatic and nothing consumes such a name — the movement-based
+// auto-attack for Mortis was never implemented in this build's JS.
