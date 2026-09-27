@@ -1,7 +1,12 @@
-//============================================================================//
-// MOD FEATURE: Reset mod settings
-// In-game name: "Reset mod settings"  (TID: ResetConfig)
-// Menu: Mod Menu — Config tab(s) (menu/mod-menu.js#8203)
-// Reset prompt for Config (core/config.js#4009).
-//============================================================================//
-
+class ResetModSettings {
+    static showResetConfigPrompt() {
+        NativeDialog.NativeDialog.show(
+            Localisation.Localisation.getString("ResetConfig"),
+            Localisation.Localisation.getString("ResetConfigDescription"),
+            Localisation.Localisation.getString("Cancel"),
+            Localisation.Localisation.getString("ResetButton"),
+            "",
+            Config.Config.resetNativeDialogListener.instance
+        );
+    }
+}
