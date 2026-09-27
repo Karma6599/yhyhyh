@@ -1,7 +1,6 @@
-//============================================================================//
-// MOD FEATURE: Latest Update
-// In-game name: "Latest Update"  (TID: LatestUpdate)
-// Menu: Mod Menu — Config tab(s) (menu/mod-menu.js#8203)
-// Patch-note dialog — Localisation.patchNotes (core/localisation.js#7265).
-//============================================================================//
-
+class LatestUpdate {
+    static showLatestUpdateChangelog() {
+        var patchNotes = Localisation.Localisation.getPatchNotesForCurrentVersion();
+        GUI.GUI.showPopup(new GenericInfoPopup.GenericInfoPopup(Localisation.Localisation.getString("LatestUpdate"), patchNotes), true, true, false);
+    }
+}
