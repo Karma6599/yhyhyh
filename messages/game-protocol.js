@@ -284,7 +284,7 @@ class CancelMatchmakingMessage extends PiranhaMessage {
 }
 CancelMatchmakingMessage.allocationSize = 144;
 
-var playersCountOffset = LogicMemory.offset(148);
+var MatchMakingStatusMessage_playersCountOffset = LogicMemory.offset(148);
 var maxPlayersOffset = LogicMemory.offset(152);
 
 class MatchMakingStatusMessage extends PiranhaMessage {
@@ -292,7 +292,7 @@ class MatchMakingStatusMessage extends PiranhaMessage {
         super(instance);
     }
     get playerCount() {
-        return this.instance.add(playersCountOffset).readInt();
+        return this.instance.add(MatchMakingStatusMessage_playersCountOffset).readInt();
     }
     get maxPlayers() {
         return this.instance.add(maxPlayersOffset).readInt();

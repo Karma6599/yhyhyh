@@ -2,7 +2,7 @@ var LogicPlayer_decode = new NativeFunction(Libg.offset(16412296, 0), "void", ["
 var playerIdOffset = LogicMemory.offset(64);
 var playerIndexOffset = LogicMemory.offset(72);
 var heroSetupOffset = LogicMemory.offset(112);
-var playersCountOffset = LogicMemory.offset(124);
+var LogicPlayer_playersCountOffset = LogicMemory.offset(124);
 var logicPlayerBattleIntroDetails = LogicMemory.offset(624);
 
 class LogicPlayer {
@@ -13,7 +13,7 @@ class LogicPlayer {
         LogicPlayer_decode(this.instance, byteStream);
     }
     getPlayersCount() {
-        return this.instance.add(playersCountOffset).readU32();
+        return this.instance.add(LogicPlayer_playersCountOffset).readU32();
     }
     getLogicPlayerBattleIntroDetails() {
         return new LogicPlayerBattleIntroDetails(this.instance.add(logicPlayerBattleIntroDetails).readPointer());

@@ -165,7 +165,7 @@ class GameDownloadManager {
 }
 
 var DownloadedImage_ctor = new NativeFunction(Libg.offset(12038932, 0), "void", ["pointer", "pointer", "pointer", "pointer", "int"]);
-var ALLOCATION_SIZE = 192;
+var DownloadedImage_allocationSize = 192;
 var textureDataOffset = LogicMemory.offset(80);
 var textureWidthOffset = LogicMemory.offset(28);
 var textureHeightOffset = LogicMemory.offset(30);
@@ -192,7 +192,7 @@ class DownloadedImage extends Sprite {
     }
     static build(path, parent, boundsRef, stretchToFill) {
         var instance, parentSlot;
-        instance = Libc.malloc(ALLOCATION_SIZE);
+        instance = Libc.malloc(DownloadedImage_allocationSize);
         parentSlot = Libc.malloc(Process.pointerSize);
         parentSlot.writePointer(parent);
         StringObject.with(path, function (pathStrObj) {

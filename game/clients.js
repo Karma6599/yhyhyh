@@ -336,7 +336,7 @@ class LogicBattleEmotes {
 }
 
 var dropCountOffset = LogicMemory.offset(4);
-var characterOffset = LogicMemory.offset(8);
+var LogicGatchaDrop_characterOffset = LogicMemory.offset(8);
 var skinOffset = LogicMemory.offset(16);
 var vanityItemOffset = LogicMemory.offset(24);
 var cardOffset = LogicMemory.offset(32);
@@ -347,7 +347,7 @@ class LogicGatchaDrop {
     dropCount = 0;
     constructor(dropType, dropCount, dataIndex, vanityItemType) {
         this.instance = Libc.malloc(LogicGatchaDrop.allocationSize);
-        this.instance.add(characterOffset).writePointer(NULL);
+        this.instance.add(LogicGatchaDrop_characterOffset).writePointer(NULL);
         this.instance.add(skinOffset).writePointer(NULL);
         this.instance.add(vanityItemOffset).writePointer(NULL);
         this.instance.add(cardOffset).writePointer(NULL);
@@ -382,7 +382,7 @@ class LogicGatchaDrop {
         this.instance.add(dropCountOffset).writeInt(count);
     }
     setCharacter(character) {
-        this.instance.add(characterOffset).writePointer(character.instance);
+        this.instance.add(LogicGatchaDrop_characterOffset).writePointer(character.instance);
     }
     setSkin(skin) {
         this.instance.add(skinOffset).writePointer(skin.instance);

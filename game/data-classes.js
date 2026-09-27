@@ -808,7 +808,7 @@ class LogicSkinData extends LogicData {
 }
 
 var LogicSkinConfData_getKillEffect = Libg.offset(15090760, 0);
-var characterOffset = LogicMemory.offset(88);
+var LogicSkinConfData_characterOffset = LogicMemory.offset(88);
 
 class LogicSkinConfData extends LogicData {
     constructor(instance) {
@@ -818,7 +818,7 @@ class LogicSkinConfData extends LogicData {
         if (index === undefined) {
             index = 0;
         }
-        var charactersArray = new LogicArrayList(this.instance.add(characterOffset));
+        var charactersArray = new LogicArrayList(this.instance.add(LogicSkinConfData_characterOffset));
         if (index < 0 || index >= charactersArray.getItemsCount()) {
             return null;
         }
@@ -929,7 +929,7 @@ class LogicMusicData extends LogicData {
     }
 }
 
-var ALLOCATION_SIZE = 40;
+var MaintenanceModeInfo_allocationSize = 40;
 var modeOffset = LogicMemory.offset(0);
 var secondsUntilEndOffset = LogicMemory.offset(4);
 var reservedQwordOffset = LogicMemory.offset(8);
@@ -941,7 +941,7 @@ class MaintenanceModeInfo {
         this.instance = instance;
     }
     alloc(mode, secondsUntilEnd, updateRequired, message) {
-        var buffer = Libc.calloc(ALLOCATION_SIZE, 1);
+        var buffer = Libc.calloc(MaintenanceModeInfo_allocationSize, 1);
         buffer.add(modeOffset).writeInt(mode);
         buffer.add(secondsUntilEndOffset).writeInt(secondsUntilEnd);
         buffer.add(reservedQwordOffset).writePointer(NULL);
