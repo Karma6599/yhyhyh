@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: FAKE_NEWS_ESPORTS_MAINTENANCE
-// In-game label: "FAKE_NEWS_ESPORTS_MAINTENANCE"
-// Menu: Debug Menu → TESTS category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var FAKE_NEWS_ESPORTS_MAINTENANCE_BUTTON = {
+    label: "FAKE_NEWS_ESPORTS_MAINTENANCE",
+    category: DebugMenuCategory.EDebugCategory.TESTS,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "FAKE_NEWS_ESPORTS_MAINTENANCE", category: ((DebugMenuCategory).EDebugCategory).TESTS }
+function FAKE_NEWS_ESPORTS_MAINTENANCE_callback() {
+    MaintenancePopupPreview.MaintenancePopupPreview.showNewsEsports();
+}

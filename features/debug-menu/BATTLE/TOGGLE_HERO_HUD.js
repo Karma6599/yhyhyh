@@ -1,11 +1,22 @@
-//============================================================================//
-// DEBUG MENU BUTTON: TOGGLE_HERO_HUD
-// In-game label: "TOGGLE_HERO_HUD"
-// Menu: Debug Menu → BATTLE category
-// Visibility: battle screen only  (checkbox — state persists)
-// Action: client-side handler: DebugCallbacks.toggleHeroHud()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var TOGGLE_HERO_HUD_BUTTON = {
+    label: "TOGGLE_HERO_HUD",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "battle",
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "TOGGLE_HERO_HUD", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function toggleHeroHud() {
+    Character.Character.heroHudHidden = !Character.Character.heroHudHidden;
+}
+
+function isHeroHudShown() {
+    return !Character.Character.heroHudHidden;
+}
+
+function TOGGLE_HERO_HUD_callback() {
+    toggleHeroHud();
+}
+
+function TOGGLE_HERO_HUD_getState() {
+    return isHeroHudShown();
+}

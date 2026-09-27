@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: MOVIE_PLAYER
-// In-game label: "MOVIE_PLAYER"
-// Menu: Debug Menu → PREVIEW category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var MOVIE_PLAYER_BUTTON = {
+    label: "MOVIE_PLAYER",
+    category: DebugMenuCategory.EDebugCategory.PREVIEW,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "MOVIE_PLAYER", category: ((DebugMenuCategory).EDebugCategory).PREVIEW }
+function MOVIE_PLAYER_callback() {
+    MoviePlayerPopup.MoviePlayerPopup.show();
+}

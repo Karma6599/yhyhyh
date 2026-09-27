@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: RESET_CUSTOM_BACKGROUND
-// In-game label: "RESET_CUSTOM_BACKGROUND"
-// Menu: Debug Menu → UTILS category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var RESET_CUSTOM_BACKGROUND_BUTTON = {
+    label: "RESET_CUSTOM_BACKGROUND",
+    category: DebugMenuCategory.EDebugCategory.UTILS,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "RESET_CUSTOM_BACKGROUND", category: ((DebugMenuCategory).EDebugCategory).UTILS }
+function RESET_CUSTOM_BACKGROUND_callback() {
+    CustomBackground.CustomBackground.clear();
+}

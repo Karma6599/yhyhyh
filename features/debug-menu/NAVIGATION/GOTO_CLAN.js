@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: GOTO_CLAN
-// In-game label: "GOTO_CLAN"
-// Menu: Debug Menu → NAVIGATION category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var GOTO_CLAN_BUTTON = {
+    label: "GOTO_CLAN",
+    category: DebugMenuCategory.EDebugCategory.NAVIGATION,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "GOTO_CLAN", category: ((DebugMenuCategory).EDebugCategory).NAVIGATION }
+function GOTO_CLAN_callback() {
+    return;
+}

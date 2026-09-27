@@ -1,12 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: ADD_POWER_POINTS
-// In-game label: "ADD_POWER_POINTS"
-// Menu: Debug Menu → ACCOUNT category
-// Visibility: always visible
-// Action: grants the resource through LogicDebugButtonMessage.addResource (module 8087)
-// Adds 1000 PowerPoints via the server debug command (visual only — see the warning popup when opening the debug menu).
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var ADD_POWER_POINTS_BUTTON = {
+    label: "ADD_POWER_POINTS",
+    resource: "PowerPoints",
+    amount: 1000
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   LogicDebugButtonMessage.addResource("PowerPoints", 1000)
+function ADD_POWER_POINTS_callback() {
+    LogicDebugButtonMessage.LogicDebugButtonMessage.addResource(ADD_POWER_POINTS_BUTTON.resource, ADD_POWER_POINTS_BUTTON.amount);
+}

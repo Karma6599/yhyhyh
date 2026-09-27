@@ -1,11 +1,16 @@
-//============================================================================//
-// DEBUG MENU BUTTON: START_TUTORIAL
-// In-game label: "START_TUTORIAL"
-// Menu: Debug Menu → BATTLE category
-// Visibility: home screen only
-// Action: client-side handler: DebugCallbacks.startTutorial()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var START_TUTORIAL_BUTTON = {
+    label: "START_TUTORIAL",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "START_TUTORIAL", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function startTutorial() {
+    var avatar = GameStateManager.GameStateManager.getPlayerAvatar();
+    if (avatar.instance.isNull()) {
+        return;
+    }
+}
+
+function START_TUTORIAL_callback() {
+    startTutorial();
+}

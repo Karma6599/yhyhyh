@@ -1,12 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: ADD_STAR_POINTS
-// In-game label: "ADD_STAR_POINTS"
-// Menu: Debug Menu → ACCOUNT category
-// Visibility: always visible
-// Action: grants the resource through LogicDebugButtonMessage.addResource (module 8087)
-// Adds 100 LegendaryTrophies via the server debug command (visual only — see the warning popup when opening the debug menu).
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var ADD_STAR_POINTS_BUTTON = {
+    label: "ADD_STAR_POINTS",
+    resource: "LegendaryTrophies",
+    amount: 100
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   LogicDebugButtonMessage.addResource("LegendaryTrophies", 100)
+function ADD_STAR_POINTS_callback() {
+    LogicDebugButtonMessage.LogicDebugButtonMessage.addResource(ADD_STAR_POINTS_BUTTON.resource, ADD_STAR_POINTS_BUTTON.amount);
+}

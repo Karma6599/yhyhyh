@@ -1,11 +1,10 @@
-//============================================================================//
-// DEBUG MENU BUTTON: ADD_DAILY_STREAK
-// In-game label: "ADD_DAILY_STREAK"
-// Menu: Debug Menu → TIME category
-// Visibility: always visible
-// Action: sends debug action #288 (int param 1) to the server via LogicDebugButtonMessage (messages/game-protocol.js#8087)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var ADD_DAILY_STREAK_BUTTON = {
+    label: "ADD_DAILY_STREAK",
+    category: DebugMenuCategory.EDebugCategory.TIME,
+    actionIdx: 288,
+    intParameter: 1
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "ADD_DAILY_STREAK", category: ((DebugMenuCategory).EDebugCategory).TIME, actionIdx: 288, intParameter: 1 }
+function ADD_DAILY_STREAK_callback() {
+    LogicDebugButtonMessage.LogicDebugButtonMessage.send(ADD_DAILY_STREAK_BUTTON.actionIdx, ADD_DAILY_STREAK_BUTTON.intParameter);
+}

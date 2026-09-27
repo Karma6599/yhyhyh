@@ -1,11 +1,30 @@
-//============================================================================//
-// DEBUG MENU BUTTON: UNLOCK_AND_MAX_ALL_LVL_9
-// In-game label: "UNLOCK_AND_MAX_ALL_LVL_9"
-// Menu: Debug Menu → GACHA_IAP category
-// Visibility: always visible
-// Action: client-side handler: DebugCallbacks.unlockAndMaxAllLvl9()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var UNLOCK_AND_MAX_ALL_LVL_9_BUTTON = {
+    label: "UNLOCK_AND_MAX_ALL_LVL_9",
+    category: DebugMenuCategory.EDebugCategory.GACHA_IAP
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "UNLOCK_AND_MAX_ALL_LVL_9", category: ((DebugMenuCategory).EDebugCategory).GACHA_IAP }
+var MAX_HERO_LEVEL_LVL9 = 9;
+
+function unlockAndMaxAllLvl9() {
+    var home = HomeMode.HomeMode.getInstance();
+    if (!home) {
+        return;
+    }
+    var charactersTable = LogicDataTables.LogicDataTables.getTable(LogicDataTables.LogicDataTables.table.Characters);
+    var count = charactersTable.getItemCount();
+    var i = 0;
+    while (i < count) {
+        var character = charactersTable.getItemAt(i);
+        if (character) {
+            try {
+                LogicAvatarHelper.LogicAvatarHelper.levelUpHeroToTargetLevel(home, character, MAX_HERO_LEVEL_LVL9);
+            } catch (e) {
+            }
+        }
+        i++;
+    }
+}
+
+function UNLOCK_AND_MAX_ALL_LVL_9_callback() {
+    unlockAndMaxAllLvl9();
+}

@@ -1,11 +1,14 @@
-//============================================================================//
-// DEBUG MENU BUTTON: MAP_EDITOR_BYPASS_PLACEMENT_ZONES
-// In-game label: "MAP_EDITOR_BYPASS_PLACEMENT_ZONES"
-// Menu: Debug Menu → MAP_EDITOR category
-// Visibility: mapeditor screen only  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var MAP_EDITOR_BYPASS_PLACEMENT_ZONES_BUTTON = {
+    label: "MAP_EDITOR_BYPASS_PLACEMENT_ZONES",
+    category: DebugMenuCategory.EDebugCategory.MAP_EDITOR,
+    mode: "mapeditor",
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "MAP_EDITOR_BYPASS_PLACEMENT_ZONES", category: ((DebugMenuCategory).EDebugCategory).MAP_EDITOR }
+function MAP_EDITOR_BYPASS_PLACEMENT_ZONES_callback() {
+    MapEditorScreen.MapEditorScreen.togglePlacementRestrictionBypass();
+}
+
+function MAP_EDITOR_BYPASS_PLACEMENT_ZONES_getState() {
+    return MapEditorScreen.MapEditorScreen.isPlacementRestrictionBypassed();
+}

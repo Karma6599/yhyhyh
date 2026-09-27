@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: ABOUT_SCREEN
-// In-game label: "ABOUT_SCREEN"
-// Menu: Debug Menu → PREVIEW category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var ABOUT_SCREEN_BUTTON = {
+    label: "ABOUT_SCREEN",
+    category: DebugMenuCategory.EDebugCategory.PREVIEW,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "ABOUT_SCREEN", category: ((DebugMenuCategory).EDebugCategory).PREVIEW }
+function ABOUT_SCREEN_callback() {
+    AboutScreen.AboutScreen.show();
+}

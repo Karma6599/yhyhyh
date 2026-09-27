@@ -1,11 +1,15 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SKIP_TUTORIAL
-// In-game label: "SKIP_TUTORIAL"
-// Menu: Debug Menu → BATTLE category
-// Visibility: battle screen only
-// Action: client-side handler: DebugCallbacks.skipTutorial()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SKIP_TUTORIAL_BUTTON = {
+    label: "SKIP_TUTORIAL",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "battle"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SKIP_TUTORIAL", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function skipTutorial() {
+    if (BattleMode.BattleMode.getInstance().isNull()) {
+        return;
+    }
+}
+
+function SKIP_TUTORIAL_callback() {
+    skipTutorial();
+}

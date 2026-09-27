@@ -1,11 +1,8 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SET_COUNTRY
-// In-game label: "SET_COUNTRY"
-// Menu: Debug Menu → UTILS category
-// Visibility: always visible
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SET_COUNTRY_BUTTON = {
+    label: "SET_COUNTRY",
+    category: DebugMenuCategory.EDebugCategory.UTILS
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SET_COUNTRY", category: ((DebugMenuCategory).EDebugCategory).UTILS }
+function SET_COUNTRY_callback() {
+    DebugCountryPopupPreview.DebugCountryPopupPreview.show();
+}

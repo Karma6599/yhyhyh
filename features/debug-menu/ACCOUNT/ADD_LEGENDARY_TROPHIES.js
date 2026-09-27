@@ -1,12 +1,10 @@
-//============================================================================//
-// DEBUG MENU BUTTON: ADD_LEGENDARY_TROPHIES
-// In-game label: "ADD_LEGENDARY_TROPHIES"
-// Menu: Debug Menu → ACCOUNT category
-// Visibility: always visible
-// Action: sends EDebugAction.ADD_SCORE with int param 100 via LogicDebugButtonMessage (module 8087)
-// Native debug action ADD_SCORE with a resource floater (type 28).
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var ADD_LEGENDARY_TROPHIES_BUTTON = {
+    label: "ADD_LEGENDARY_TROPHIES",
+    actionIdx: LogicDebugButtonMessage.LogicDebugButtonMessage.EDebugAction.ADD_SCORE,
+    amount: 100,
+    type: 28
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   LogicDebugButtonMessage.executeNativeWithFloater(EDebugAction.ADD_SCORE, 100, 28)
+function ADD_LEGENDARY_TROPHIES_callback() {
+    LogicDebugButtonMessage.LogicDebugButtonMessage.executeNativeWithFloater(ADD_LEGENDARY_TROPHIES_BUTTON.actionIdx, ADD_LEGENDARY_TROPHIES_BUTTON.amount, ADD_LEGENDARY_TROPHIES_BUTTON.type);
+}

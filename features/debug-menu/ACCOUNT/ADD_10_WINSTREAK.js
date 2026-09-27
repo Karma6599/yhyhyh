@@ -1,11 +1,10 @@
-//============================================================================//
-// DEBUG MENU BUTTON: ADD_10_WINSTREAK
-// In-game label: "ADD_10_WINSTREAK"
-// Menu: Debug Menu → ACCOUNT category
-// Visibility: always visible
-// Action: sends debug action #210 (int param 10) to the server via LogicDebugButtonMessage (messages/game-protocol.js#8087)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var ADD_10_WINSTREAK_BUTTON = {
+    label: "ADD_10_WINSTREAK",
+    category: DebugMenuCategory.EDebugCategory.ACCOUNT,
+    actionIdx: 210,
+    intParameter: 10
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   label: "ADD_10_WINSTREAK", category: ((DebugMenuCategory).EDebugCategory).ACCOUNT, actionIdx: 210, intParameter: 10, 47: { }
+function ADD_10_WINSTREAK_callback() {
+    LogicDebugButtonMessage.LogicDebugButtonMessage.send(ADD_10_WINSTREAK_BUTTON.actionIdx, ADD_10_WINSTREAK_BUTTON.intParameter);
+}

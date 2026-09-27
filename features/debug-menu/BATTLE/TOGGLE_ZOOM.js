@@ -1,11 +1,14 @@
-//============================================================================//
-// DEBUG MENU BUTTON: TOGGLE_ZOOM
-// In-game label: "TOGGLE_ZOOM"
-// Menu: Debug Menu → BATTLE category
-// Visibility: battle screen only  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var TOGGLE_ZOOM_BUTTON = {
+    label: "TOGGLE_ZOOM",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "battle",
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "TOGGLE_ZOOM", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function TOGGLE_ZOOM_callback() {
+    BattleCamera.BattleCamera.toggleZoom();
+}
+
+function TOGGLE_ZOOM_getState() {
+    return BattleCamera.BattleCamera.zoomMultiplier !== 1;
+}

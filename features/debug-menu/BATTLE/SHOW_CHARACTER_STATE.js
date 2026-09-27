@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SHOW_CHARACTER_STATE
-// In-game label: "SHOW_CHARACTER_STATE"
-// Menu: Debug Menu → BATTLE category
-// Visibility: battle screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SHOW_CHARACTER_STATE_BUTTON = {
+    label: "SHOW_CHARACTER_STATE",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "battle"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SHOW_CHARACTER_STATE", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function SHOW_CHARACTER_STATE_callback() {
+    BattleDebugOverlay.BattleDebugOverlay.toggle();
+}

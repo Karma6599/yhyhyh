@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SHOW_CONNECTION_INFO
-// In-game label: "SHOW_CONNECTION_INFO"
-// Menu: Debug Menu → BATTLE category
-// Visibility: battle screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SHOW_CONNECTION_INFO_BUTTON = {
+    label: "SHOW_CONNECTION_INFO",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "battle"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SHOW_CONNECTION_INFO", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function SHOW_CONNECTION_INFO_callback() {
+    BattleNetStatsOverlay.BattleNetStatsOverlay.toggle();
+}

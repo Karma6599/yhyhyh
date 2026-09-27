@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: OPEN_CLAN_POPUP
-// In-game label: "OPEN_CLAN_POPUP"
-// Menu: Debug Menu → SOCIAL category
-// Visibility: home screen only
-// Action: client-side handler: DebugCallbacks.openClanPopup()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var OPEN_CLAN_POPUP_BUTTON = {
+    label: "OPEN_CLAN_POPUP",
+    category: DebugMenuCategory.EDebugCategory.SOCIAL,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "OPEN_CLAN_POPUP", category: ((DebugMenuCategory).EDebugCategory).SOCIAL }
+function OPEN_CLAN_POPUP_callback() {
+    HomePage.HomePage.tryOpenClanPopup();
+}

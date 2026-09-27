@@ -1,11 +1,27 @@
-//============================================================================//
-// DEBUG MENU BUTTON: TOGGLE_FOLLOW_SPECTATE
-// In-game label: "TOGGLE_FOLLOW_SPECTATE"
-// Menu: Debug Menu → REPLAY_SPECTATE category
-// Visibility: battle screen only  (checkbox — state persists)
-// Action: client-side handler: DebugCallbacks.toggleFollowSpectate()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var TOGGLE_FOLLOW_SPECTATE_BUTTON = {
+    label: "TOGGLE_FOLLOW_SPECTATE",
+    category: DebugMenuCategory.EDebugCategory.REPLAY_SPECTATE,
+    mode: "battle",
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "TOGGLE_FOLLOW_SPECTATE", category: ((DebugMenuCategory).EDebugCategory).REPLAY_SPECTATE }
+function toggleFollowSpectate() {
+    if (BattleMode.BattleMode.getInstance().isNull()) {
+        return;
+    }
+}
+
+function isFollowSpectate() {
+    if (BattleMode.BattleMode.getInstance().isNull()) {
+        return false;
+    }
+    return BattleScreen.BattleScreen.isFollowSpectate();
+}
+
+function TOGGLE_FOLLOW_SPECTATE_callback() {
+    toggleFollowSpectate();
+}
+
+function TOGGLE_FOLLOW_SPECTATE_getState() {
+    return isFollowSpectate();
+}

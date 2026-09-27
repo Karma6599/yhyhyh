@@ -1,11 +1,10 @@
-//============================================================================//
-// DEBUG MENU BUTTON: CLAIM_TROPHY_ROAD
-// In-game label: "CLAIM_TROPHY_ROAD"
-// Menu: Debug Menu → ACCOUNT category
-// Visibility: always visible
-// Action: sends debug action #129 (int param 1000) to the server via LogicDebugButtonMessage (messages/game-protocol.js#8087)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var CLAIM_TROPHY_ROAD_BUTTON = {
+    label: "CLAIM_TROPHY_ROAD",
+    category: DebugMenuCategory.EDebugCategory.ACCOUNT,
+    actionIdx: 129,
+    intParameter: 1000
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   label: "CLAIM_TROPHY_ROAD", category: ((DebugMenuCategory).EDebugCategory).ACCOUNT, actionIdx: 129, intParameter: 1000 }
+function CLAIM_TROPHY_ROAD_callback() {
+    LogicDebugButtonMessage.LogicDebugButtonMessage.send(CLAIM_TROPHY_ROAD_BUTTON.actionIdx, CLAIM_TROPHY_ROAD_BUTTON.intParameter);
+}

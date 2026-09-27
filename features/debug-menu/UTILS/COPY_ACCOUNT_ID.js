@@ -1,11 +1,14 @@
-//============================================================================//
-// DEBUG MENU BUTTON: COPY_ACCOUNT_ID
-// In-game label: "COPY_ACCOUNT_ID"
-// Menu: Debug Menu → UTILS category
-// Visibility: always visible
-// Action: client-side handler: DebugCallbacks.copyAccountId()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var COPY_ACCOUNT_ID_BUTTON = {
+    label: "COPY_ACCOUNT_ID",
+    category: DebugMenuCategory.EDebugCategory.UTILS
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "COPY_ACCOUNT_ID", category: ((DebugMenuCategory).EDebugCategory).UTILS }
+function copyAccountId() {
+    var accountId = GameMain.GameMain.getAccountId();
+    var tag = "".concat(accountId.getHigh(), "-", accountId.getLow());
+    Application.Application.copyString(tag);
+}
+
+function COPY_ACCOUNT_ID_callback() {
+    copyAccountId();
+}

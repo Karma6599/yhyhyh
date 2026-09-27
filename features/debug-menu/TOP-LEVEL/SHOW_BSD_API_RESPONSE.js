@@ -1,12 +1,15 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SHOW_BSD_API_RESPONSE
-// In-game label: "SHOW_BSD_API_RESPONSE"
-// Menu: Debug Menu → TOP-LEVEL category
-// Visibility: always visible  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Checkbox: dump every BSD+ API response to the debug log. Config key ShowBSDApiResponse, default false. Implementation: network/bsd-api.js (module 7474).
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+function SHOW_BSD_API_RESPONSE_callback() {
+    Config.Config.config.ShowBSDApiResponse = !Config.Config.config.ShowBSDApiResponse;
+    FileManager.FileManager.updateConfigFile();
+    var btn = new DebugGameButton.DebugGameButton(button);
+    var checkbox = btn.getCheckbox();
+    if (!checkbox.isNull()) {
+        btn.switchCheckbox(Config.Config.config.ShowBSDApiResponse);
+    }
+    var message = Config.Config.config.ShowBSDApiResponse ? "ON" : "OFF";
+    EDebugger.EDebugger.addMessage(EDebugger.EDebugger.INFO, message);
+}
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   DebugMenu.createTopLevelButtons() — checkbox bound to Config.config.ShowBSDApiResponse (debug logging builds only)
+function SHOW_BSD_API_RESPONSE_getState() {
+    return Config.Config.config.ShowBSDApiResponse === true;
+}

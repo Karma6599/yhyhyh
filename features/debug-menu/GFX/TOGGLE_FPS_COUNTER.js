@@ -1,12 +1,21 @@
-//============================================================================//
-// DEBUG MENU BUTTON: TOGGLE_FPS_COUNTER
-// In-game label: "TOGGLE_FPS_COUNTER"
-// Menu: Debug Menu → GFX category
-// Visibility: always visible  (checkbox — state persists)
-// Action: client-side handler: DebugCallbacks.toggleFpsCounter()  (menu/debug-tools.js#1390)
-// Same implementation as the Mod Settings toggle 'Show FPS counter' — features/mod-settings/show-fps-counter.js (module 9786).
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var TOGGLE_FPS_COUNTER_BUTTON = {
+    label: "TOGGLE_FPS_COUNTER",
+    category: DebugMenuCategory.EDebugCategory.GFX,
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "TOGGLE_FPS_COUNTER", category: ((DebugMenuCategory).EDebugCategory).GFX }
+function toggleFpsCounter() {
+    FPSCounter.FPSCounter.toggleEnabled();
+}
+
+function isFpsCounterShown() {
+    return FPSCounter.FPSCounter.isEnabled();
+}
+
+function TOGGLE_FPS_COUNTER_callback() {
+    toggleFpsCounter();
+}
+
+function TOGGLE_FPS_COUNTER_getState() {
+    return isFpsCounterShown();
+}

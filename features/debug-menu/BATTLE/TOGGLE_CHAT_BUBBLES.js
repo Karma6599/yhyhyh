@@ -1,11 +1,28 @@
-//============================================================================//
-// DEBUG MENU BUTTON: TOGGLE_CHAT_BUBBLES
-// In-game label: "TOGGLE_CHAT_BUBBLES"
-// Menu: Debug Menu → BATTLE category
-// Visibility: battle screen only  (checkbox — state persists)
-// Action: client-side handler: DebugCallbacks.toggleChatBubbles()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var TOGGLE_CHAT_BUBBLES_BUTTON = {
+    label: "TOGGLE_CHAT_BUBBLES",
+    category: DebugMenuCategory.EDebugCategory.BATTLE,
+    mode: "battle",
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "TOGGLE_CHAT_BUBBLES", category: ((DebugMenuCategory).EDebugCategory).BATTLE }
+function toggleChatBubbles() {
+    if (BattleMode.BattleMode.getInstance().isNull()) {
+        return;
+    }
+    var hud = BattleScreen.BattleScreen.getCombatHUD();
+    if (hud.isNull()) {
+        return;
+    }
+}
+
+function areChatBubblesVisible() {
+    return CombatHUD.CombatHUD.areChatBubblesVisible();
+}
+
+function TOGGLE_CHAT_BUBBLES_callback() {
+    toggleChatBubbles();
+}
+
+function TOGGLE_CHAT_BUBBLES_getState() {
+    return areChatBubblesVisible();
+}

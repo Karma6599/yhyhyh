@@ -1,11 +1,12 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SOFT_RELOAD_GAME
-// In-game label: "SOFT_RELOAD_GAME"
-// Menu: Debug Menu → UTILS category
-// Visibility: always visible
-// Action: client-side handler: DebugCallbacks.softReloadGame()  (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SOFT_RELOAD_GAME_BUTTON = {
+    label: "SOFT_RELOAD_GAME",
+    category: DebugMenuCategory.EDebugCategory.UTILS
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SOFT_RELOAD_GAME", category: ((DebugMenuCategory).EDebugCategory).UTILS }
+function softReloadGame() {
+    return;
+}
+
+function SOFT_RELOAD_GAME_callback() {
+    softReloadGame();
+}

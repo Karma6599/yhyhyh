@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: FAKE_SHORT_MAINTENANCE_30S
-// In-game label: "FAKE_SHORT_MAINTENANCE_30S"
-// Menu: Debug Menu → TESTS category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var FAKE_SHORT_MAINTENANCE_30S_BUTTON = {
+    label: "FAKE_SHORT_MAINTENANCE_30S",
+    category: DebugMenuCategory.EDebugCategory.TESTS,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "FAKE_SHORT_MAINTENANCE_30S", category: ((DebugMenuCategory).EDebugCategory).TESTS }
+function FAKE_SHORT_MAINTENANCE_30S_callback() {
+    MaintenancePopupPreview.MaintenancePopupPreview.showShort30s();
+}

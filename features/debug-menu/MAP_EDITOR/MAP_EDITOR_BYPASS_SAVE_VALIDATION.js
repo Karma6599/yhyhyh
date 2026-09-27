@@ -1,11 +1,14 @@
-//============================================================================//
-// DEBUG MENU BUTTON: MAP_EDITOR_BYPASS_SAVE_VALIDATION
-// In-game label: "MAP_EDITOR_BYPASS_SAVE_VALIDATION"
-// Menu: Debug Menu → MAP_EDITOR category
-// Visibility: mapeditor screen only  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var MAP_EDITOR_BYPASS_SAVE_VALIDATION_BUTTON = {
+    label: "MAP_EDITOR_BYPASS_SAVE_VALIDATION",
+    category: DebugMenuCategory.EDebugCategory.MAP_EDITOR,
+    mode: "mapeditor",
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "MAP_EDITOR_BYPASS_SAVE_VALIDATION", category: ((DebugMenuCategory).EDebugCategory).MAP_EDITOR }
+function MAP_EDITOR_BYPASS_SAVE_VALIDATION_callback() {
+    MapEditorScreen.MapEditorScreen.toggleSaveValidationBypass();
+}
+
+function MAP_EDITOR_BYPASS_SAVE_VALIDATION_getState() {
+    return MapEditorScreen.MapEditorScreen.isSaveValidationBypassed();
+}

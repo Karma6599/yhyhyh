@@ -1,12 +1,13 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SMOOTH_HUD
-// In-game label: "SMOOTH_HUD"
-// Menu: Debug Menu → GFX category
-// Visibility: always visible  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Smoothed HUD graphs — features/battle-ui/smooth-hud.js (modules 5230 + 6364).
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SMOOTH_HUD_BUTTON = {
+    label: "SMOOTH_HUD",
+    category: DebugMenuCategory.EDebugCategory.GFX,
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SMOOTH_HUD", category: ((DebugMenuCategory).EDebugCategory).GFX }
+function SMOOTH_HUD_callback() {
+    SmoothHud.SmoothHud.toggle();
+}
+
+function SMOOTH_HUD_getState() {
+    return SmoothHud.SmoothHud.isEnabled();
+}

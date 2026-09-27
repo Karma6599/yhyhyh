@@ -1,11 +1,15 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SCROLLABLE_DEBUG_LOG
-// In-game label: "SCROLLABLE_DEBUG_LOG"
-// Menu: Debug Menu → UTILS category
-// Visibility: dev builds only (isDev)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SCROLLABLE_DEBUG_LOG_BUTTON = {
+    label: "SCROLLABLE_DEBUG_LOG",
+    category: DebugMenuCategory.EDebugCategory.UTILS,
+    isDev: true
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SCROLLABLE_DEBUG_LOG", category: ((DebugMenuCategory).EDebugCategory).UTILS }
+function toggleScrollableDebugLog() {
+    if (!EDebugger.EDebugger.isCreated()) {
+        return;
+    }
+}
+
+function SCROLLABLE_DEBUG_LOG_callback() {
+    toggleScrollableDebugLog();
+}

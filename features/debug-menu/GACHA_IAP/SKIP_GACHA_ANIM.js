@@ -1,11 +1,13 @@
-//============================================================================//
-// DEBUG MENU BUTTON: SKIP_GACHA_ANIM
-// In-game label: "SKIP_GACHA_ANIM"
-// Menu: Debug Menu → GACHA_IAP category
-// Visibility: always visible  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var SKIP_GACHA_ANIM_BUTTON = {
+    label: "SKIP_GACHA_ANIM",
+    category: DebugMenuCategory.EDebugCategory.GACHA_IAP,
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "SKIP_GACHA_ANIM", category: ((DebugMenuCategory).EDebugCategory).GACHA_IAP }
+function SKIP_GACHA_ANIM_callback() {
+    HomeScreen.HomeScreen.setSkipGatchaAnimation(!HomeScreen.HomeScreen.isSkipGatchaAnimationEnabled());
+}
+
+function SKIP_GACHA_ANIM_getState() {
+    return HomeScreen.HomeScreen.isSkipGatchaAnimationEnabled();
+}

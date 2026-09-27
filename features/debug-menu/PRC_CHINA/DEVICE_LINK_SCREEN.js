@@ -1,11 +1,9 @@
-//============================================================================//
-// DEBUG MENU BUTTON: DEVICE_LINK_SCREEN
-// In-game label: "DEVICE_LINK_SCREEN"
-// Menu: Debug Menu → PRC_CHINA category
-// Visibility: home screen only
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var DEVICE_LINK_SCREEN_BUTTON = {
+    label: "DEVICE_LINK_SCREEN",
+    category: DebugMenuCategory.EDebugCategory.PRC_CHINA,
+    mode: "home"
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "DEVICE_LINK_SCREEN", category: ((DebugMenuCategory).EDebugCategory).PRC_CHINA }
+function DEVICE_LINK_SCREEN_callback() {
+    DeviceLinkWindow.DeviceLinkWindow.show();
+}

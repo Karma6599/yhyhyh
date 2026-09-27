@@ -1,11 +1,19 @@
-//============================================================================//
-// DEBUG MENU BUTTON: TEST_CONTENT_UPDATE
-// In-game label: "TEST_CONTENT_UPDATE"
-// Menu: Debug Menu → TESTS category
-// Visibility: always visible  (checkbox — state persists)
-// Action: client-side handler in DebugCallbacks (menu/debug-tools.js#1390)
-// Spec source: menu/debug-menu.js (module 6242 DebugButtonSpecs)
-//============================================================================//
+var TEST_CONTENT_UPDATE_BUTTON = {
+    label: "TEST_CONTENT_UPDATE",
+    category: DebugMenuCategory.EDebugCategory.TESTS,
+    checkbox: {}
+};
 
-// Button spec (verbatim from DebugButtonSpecs):
-//   { label: "TEST_CONTENT_UPDATE", category: ((DebugMenuCategory).EDebugCategory).TESTS }
+function enableTestContentUpdate() {
+    ServerConnection.ServerConnection.setTestContentUpdate(!ServerConnection.ServerConnection.isTestContentUpdateEnabled());
+    if (ServerConnection.ServerConnection.isTestContentUpdateEnabled()) {
+    }
+}
+
+function TEST_CONTENT_UPDATE_callback() {
+    enableTestContentUpdate();
+}
+
+function TEST_CONTENT_UPDATE_getState() {
+    return ServerConnection.ServerConnection.isTestContentUpdateEnabled();
+}
